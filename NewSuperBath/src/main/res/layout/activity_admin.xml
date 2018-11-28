@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextClock
+                    android:id="@+id/textClock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:format24Hour="HH:mm yyyy 年 MM月dd日 EEEE" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="是否可以向服务器发送消息" />
+
+                <Switch
+                    android:id="@+id/switch_publish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:textOff="关闭"
+                    android:textOn="开启" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="一键开启所有水控机" />
+
+                <Button
+                    android:id="@+id/bt_openallwater"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="确认" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="一键关闭所有水控机" />
+
+                <Button
+                    android:id="@+id/bt_closeallwater"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="确认" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="一键开启所有箱柜" />
+
+                <Button
+                    android:id="@+id/bt_openallbox"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="确认" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="开启/关闭指定水控机" />
+
+                <EditText
+                    android:id="@+id/et_water"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+                <Button
+                    android:id="@+id/bt_openonewater"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="开启" />
+
+                <Button
+                    android:id="@+id/bt_closeonewater"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="关闭" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="结算水量：" />
+
+                <TextView
+                    android:id="@+id/tv_used"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_left_hair"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="开启左吹风机：" />
+
+                <TextView
+                    android:id="@+id/tv_left_hair_time"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="剩余时间：0" />
+
+                <EditText
+                    android:id="@+id/et_left_hair"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3" />
+
+                <Button
+                    android:id="@+id/bt_open_left_hair"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="确认" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_right_hair"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="开启右吹风机：" />
+
+                <TextView
+                    android:id="@+id/tv_right_hair_time"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="剩余时间：0" />
+
+                <EditText
+                    android:id="@+id/et_right_hair"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3" />
+
+                <Button
+                    android:id="@+id/bt_open_right_hair"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="确认" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="开启指定箱柜" />
+
+                <EditText
+                    android:id="@+id/et_box"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+                <Button
+                    android:id="@+id/bt_openonebox"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="开启" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="当前设备id" />
+
+                <TextView
+                    android:id="@+id/et_id"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:text="0000000000" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="重新设置设备id" />
+
+                <EditText
+                    android:id="@+id/et_uuid"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:hint="12345678-1234-1234-1234-123456789123"
+                    android:inputType="textPersonName"
+                    android:maxLength="36" />
+
+                <Button
+                    android:id="@+id/bt_set_uuid"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="设置uuid" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/admin_tv_mode"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="选择模式" />
+
+                <Button
+                    android:id="@+id/admin_bt_change_bath"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="切换到洗浴模式" />
+
+                <Button
+                    android:id="@+id/admin_bt_change_hairdryer"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="切换到吹风机模式" />
+
+                <Button
+                    android:id="@+id/admin_bt_change_mixed"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="切换到混合模式" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="当前协议版本：" />
+
+                <Button
+                    android:id="@+id/bt_version_v1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="V1版本协议" />
+
+                <Button
+                    android:id="@+id/bt_version_v3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="V3版本协议" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_faucetNum"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="当前水控机设备最大为：" />
+
+                <EditText
+                    android:id="@+id/et_faucetNum"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+                <Button
+                    android:id="@+id/bt_faucetNum"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="更改水控机设备最大数" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_ventilato_test"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="通风设备测试" />
+
+
+                <Button
+                    android:id="@+id/bt_ventilator_low"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="低档" />
+
+                <Button
+                    android:id="@+id/bt_ventilator_medium"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="中档" />
+
+                <Button
+                    android:id="@+id/bt_ventilator_high"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="高档" />
+
+                <Button
+                    android:id="@+id/bt_ventilator_close"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="关闭" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_boxNum"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="当前箱柜最大数：" />
+
+                <EditText
+                    android:id="@+id/et_box_num"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2" />
+
+                <Button
+                    android:id="@+id/bt_set_box_num"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="更改箱柜最大数" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_status_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="当前状态栏状态：无" />
+
+                <Button
+                    android:id="@+id/bt_status_bar_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="开启状态栏" />
+
+                <Button
+                    android:id="@+id/bt_status_bar_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="关闭状态栏" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_admin_pwd"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="更改当前admin用户密码" />
+
+                <EditText
+                    android:id="@+id/et_user_pwd1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/et_user_pwd2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="再次输入密码"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/bt_user_pwd"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="确认" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_sys_net"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="检测结果：" />
+                <Button
+                    android:id="@+id/bt_sys_net"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="网络检测" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/img_sys_uuid"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="?attr/colorControlActivated" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_exit_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="退出界面" />
+
+                <Button
+                    android:id="@+id/bt_finish_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="关闭应用" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

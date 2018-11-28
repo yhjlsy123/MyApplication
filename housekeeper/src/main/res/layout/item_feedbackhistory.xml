@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp23"
+        android:layout_marginRight="23dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/item_history_create"
+            style="@style/textview28_black"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="2017-01-23"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/line_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            android:paddingBottom="30px">
+
+            <com.zhuochi.hydream.bathhousekeeper.view.RoundedImageView
+                android:id="@+id/item_history_systemphoto"
+                android:layout_width="44dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/opinion_dialogue_two"
+                app:border_color="@color/blue4DA9FF"
+                app:border_width="@dimen/x1"
+                app:corner_radius="@dimen/x200"
+                app:layout_auto_basewidth="height" />
+
+            <ImageView
+                android:id="@+id/img_opw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/item_history_systemphoto"
+                android:src="@mipmap/opinion_box_w_l" />
+
+            <TextView
+                android:id="@+id/item_history_feedback_system"
+                style="@style/textview28_black"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_opw"
+                android:background="@mipmap/opinion_box_w_r"
+                android:minWidth="0dp"
+                android:padding="@dimen/dp5"
+                android:text="wangasfasd"
+                android:textColor="@color/black333" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/line_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10">
+
+            <com.zhuochi.hydream.bathhousekeeper.view.RoundedImageView
+                android:id="@+id/item_history_userphoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/opinion_dialogue_logo"
+                app:border_color="@color/blue4DA9FF"
+                app:border_width="@dimen/x1"
+                app:corner_radius="@dimen/x200"
+                app:layout_auto_basewidth="height" />
+
+            <ImageView
+                android:id="@+id/img_opb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/item_history_userphoto"
+                android:src="@mipmap/opinion_box_b_l" />
+
+            <TextView
+                android:id="@+id/item_history_content"
+                style="@style/textview28_black"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_opb"
+                android:background="@mipmap/opinion_box_b_r"
+                android:padding="@dimen/dp5"
+                android:text="12123"
+                android:textColor="@color/black333" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

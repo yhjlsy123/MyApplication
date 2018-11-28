@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+                android:drawableLeft="@mipmap/water_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总订单数"
+                android:drawablePadding="@dimen/dp10"
+                android:textSize="@dimen/dp18"
+                android:textColor="@color/gray999"/>
+
+            <TextView
+                android:id="@+id/order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/red_fe0000"
+                android:textSize="@dimen/dp18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+                android:drawableLeft="@mipmap/water_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总销售额"
+                android:drawablePadding="@dimen/dp10"
+                android:textSize="@dimen/dp18"
+                android:textColor="@color/gray999"/>
+
+            <TextView
+                android:id="@+id/sell_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp10"
+                android:text="0"
+                android:textColor="@color/red_fe0000"
+                android:textSize="@dimen/dp18" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:id="@+id/headViewContaner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+    <View
+        style="@style/view_all"/>
+    <include
+        layout="@layout/refresh_recyclerview_layout" />
+</LinearLayout>

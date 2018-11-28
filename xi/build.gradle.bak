@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+android {
+    signingConfigs {
+        release {
+            keyAlias '超级澡堂'
+            keyPassword 'xxl147168775'
+            storeFile file('D:/F/APPJKS/xishuashua.jks')
+            storePassword 'xxl147168775'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    dexOptions {
+        jumboMode true
+    }
+    defaultConfig {
+        applicationId "com.isgala.xishuashua"
+        useLibrary'org.apache.http.legacy'
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 9
+        versionName '1.1.6'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+//执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+//    lintOptions {
+//        abortOnError false
+//    }
+    //签名
+//    signingConfigs {
+//        debug {
+//
+//        }
+//        release {// 自己的签名文件
+//            storeFile file("doc/****.jks")
+//            storePassword "******"
+//            keyAlias "******"
+//            keyPassword "******"
+//        }
+//    }
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+            //移除无用的resource文件
+            shrinkResources false
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            //     signingConfig signingConfigs.release
+            //设置打包apk的信息 存放位置
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为app_v1.0_2015-xx-xx_xxxx.apk
+                        //def fileName = "app_v${defaultConfig.versionName}_${releaseTime()}.apk"
+                        def fileName = "com.isgala.xi.${defaultConfig.versionName}.${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+            signingConfig signingConfigs.release
+        }
+    }
+    // 渠道Flavors，配置不同风格的app,友盟渠道统计时用到
+    productFlavors {
+        "ali" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "ali"]
+        }
+        "360" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "360"]
+        }
+        "vivo" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
+        }
+        "yingyongbao" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+        }
+        "huawei" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
+        }
+        "jinli" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "jinli"]
+        }
+        "letv" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "letv"]
+        }
+        "meizu" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "meizu"]
+        }
+        "sumsa" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "sum"]
+        }
+        "baidu" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        "xi" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xi"]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:27.0.3'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:design:27.0.3'
+    compile 'com.android.support:recyclerview-v7:27.0.3'
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:volley-integration:1.4.0'
+    compile 'io.github.openfeign:feign-gson:9.3.1'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.qiniu:qiniu-android-sdk:7.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    //compile project(':PushSDK')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/alipaySdk-20161009.jar')
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile files('libs/libammsdk.jar')
+    compile 'com.github.Yinuan:Bluepro-hongyi:v1.6'
+}

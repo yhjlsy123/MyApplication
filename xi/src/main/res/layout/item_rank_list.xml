@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/rank_item_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:src="@color/line" />
+
+        <TextView
+            android:id="@+id/rank_item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <com.isgala.xishuashua.view.RoundedImageView
+            android:id="@+id/rank_user_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x60"
+            app:corner_radius="45dp"
+            app:layout_auto_basewidth="height" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x240"
+            android:layout_toRightOf="@+id/rank_user_photo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rank_use_time"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/blue4DA9FF"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_rank_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/rank_love_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y2"
+                android:text="90"
+                android:textColor="@color/gray999"
+                android:textSize="24px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/rank_love" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

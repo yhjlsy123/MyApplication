@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_activity_balance_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@mipmap/balance_recharge_background1"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="12" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="223"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/iv_activity_balance_charge2000_line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y8"
+                android:src="@mipmap/balance_recharge_line2" />
+
+            <TextView
+                android:id="@+id/tv_item_recharge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100元充值卡"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_item_recharge_subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="送5元"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_item_recharge_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="截止时间：2016-01-25"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="100">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@color/line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_item_recharge_recharge"
+                android:layout_width="@dimen/x149"
+                android:layout_height="@dimen/y149"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/balance_recharge_lijichongzhi_juxing">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="立即"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="充值"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="12" />
+    </LinearLayout>
+
+</RelativeLayout>

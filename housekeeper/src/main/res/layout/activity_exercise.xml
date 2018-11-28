@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.zhuochi.hydream.bathhousekeeper.fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toobar_button" />
+
+        <LinearLayout
+            android:id="@+id/headViewContaner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+
+        <View
+            style="@style/view_all"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/headViewContaner" />
+
+        <include layout="@layout/refresh_recyclerview_layout" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/dp60"
+        android:background="@mipmap/icon_tianjia" />
+
+</RelativeLayout>

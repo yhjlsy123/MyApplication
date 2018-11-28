@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="710px"
+        android:layout_height="115dp"
+        android:background="@drawable/shape_stroke_gray_backgroud">
+
+        <EditText
+            android:id="@+id/et_dialog_pic_vrcode"
+            android:layout_width="340px"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/shape_bg_corner_blue_white"
+            android:digits="@string/input_regex"
+            android:gravity="left|center_vertical"
+            android:hint="请输入验证码"
+            android:inputType="text"
+            android:maxLength="4"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray999"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_toRightOf="@id/et_dialog_pic_vrcode"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_dialog_pic_vrcode"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="27dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/refresh_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16px"
+                android:text="看不清? 点击刷新"
+                android:textColor="@color/gray999"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

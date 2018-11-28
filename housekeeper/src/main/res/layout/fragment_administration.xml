@@ -1,0 +1,249 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    tools:context="com.zhuochi.hydream.bathhousekeeper.fragment.ManagmentFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp55"
+            android:background="@color/blue_system">
+
+            <ImageView
+                android:id="@+id/toolbar_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/toolbar_menu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dp12"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dp18" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="@dimen/dp15"
+                android:text="@string/device_manage" />
+            <!--<android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_list_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="4"
+              />
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginTop="@dimen/dp10"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingTop="10dp">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_bathing_manage"-->
+                    <!--style="@style/main_text"-->
+                    <!--android:drawablePadding="@dimen/dp15"-->
+                    <!--android:drawableTop="@mipmap/management_shower"-->
+                    <!--android:text="@string/bathing_manage" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@mipmap/management_dotted" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_blower_manage"-->
+                    <!--style="@style/main_text"-->
+                    <!--android:drawablePadding="@dimen/dp15"-->
+                    <!--android:drawableTop="@mipmap/management_blowing"-->
+                    <!--android:text="@string/blower_manage" />-->
+
+                <!--<TextView-->
+                    <!--style="@style/main_text"-->
+                    <!--android:visibility="invisible" />-->
+
+                <!--<TextView-->
+                    <!--style="@style/main_text"-->
+                    <!--android:visibility="invisible" />-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="@dimen/dp15"
+                android:text="@string/capital_manage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_deposit_manage"
+                    style="@style/main_text"
+                    android:drawablePadding="@dimen/dp15"
+                    android:drawableTop="@mipmap/management_deposit"
+                    android:text="@string/deposit_manage" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/management_dotted" />
+
+                <TextView
+                    android:id="@+id/tv_Refunds_manage"
+                    style="@style/main_text"
+                    android:drawablePadding="@dimen/dp15"
+                    android:drawableTop="@mipmap/management_balance"
+                    android:text="@string/Refunds_manage" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/management_dotted" />
+
+                <TextView
+                    android:id="@+id/tv_Rechargeable_card_manage"
+                    style="@style/main_text"
+                    android:drawablePadding="@dimen/dp15"
+                    android:drawableTop="@mipmap/management_card"
+                    android:text="@string/Rechargeable_card_manage" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/management_dotted" />
+
+                <TextView
+                    android:id="@+id/tv_Deposit_refund_manage"
+                    style="@style/main_text"
+                    android:drawablePadding="@dimen/dp15"
+                    android:visibility="invisible"
+                    android:drawableTop="@mipmap/management_depositrefund"
+                    android:text="@string/Deposit_refund_manage" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="@dimen/dp15"
+                android:text="@string/comprehensive_manage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_feedback_manage"
+                    style="@style/main_text"
+                    android:drawablePadding="@dimen/dp15"
+                    android:drawableTop="@mipmap/management_feedback"
+                    android:text="@string/feedback_manage" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/management_dotted" />
+
+                <TextView
+                    android:id="@+id/tv_use_manage"
+                    style="@style/main_text"
+                    android:drawablePadding="@dimen/dp15"
+                    android:drawableTop="@mipmap/management_user"
+                    android:text="@string/use_manage" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/management_dotted" />
+
+                <TextView
+                    android:id="@+id/tv_Notice_manage"
+                    style="@style/main_text"
+                    android:drawablePadding="@dimen/dp15"
+                    android:drawableTop="@mipmap/management_notice"
+                    android:text="@string/Notice_manage" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/management_dotted" />
+
+                <TextView
+                    android:id="@+id/tv_activity_manage"
+                    style="@style/main_text"
+                    android:drawablePadding="@dimen/dp15"
+                    android:drawableTop="@mipmap/management_activity"
+                    android:text="@string/activity_manage" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BuletoothJar</string>
+    <string name="tips">提醒</string>
+    <string name="tips_bluetooth_disconnect">打开蓝牙来允许“智趣校园”连接到配件</string>
+
+    <string name="tips_bluetooth_bind">是否确定绑定该水表</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="connecting_device">设备连接中···</string>
+    <string name="connected_device">设备已连接</string>
+    <string name="unanble_connect_device">无法连接设备</string>
+    <string name="error_qr">无效的二维码！</string>
+</resources>

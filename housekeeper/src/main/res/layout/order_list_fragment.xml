@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RadioButton
+            android:id="@+id/rb_order_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/dp5"
+            android:drawableTop="@drawable/rb_order_all_selector"
+            android:gravity="center"
+            android:text="全部订单"
+            android:textColor="@drawable/tv_color_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_order_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/dp5"
+            android:drawableTop="@drawable/rb_order_complete_selector"
+            android:gravity="center"
+            android:text="已完成"
+            android:textColor="@drawable/tv_color_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_order_micropayment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/dp5"
+            android:drawableTop="@drawable/rb_order_micropayment_selector"
+            android:gravity="center"
+            android:text="未支付"
+            android:textColor="@drawable/tv_color_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_order_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/dp5"
+            android:drawableTop="@drawable/rb_order_cancel_selector"
+            android:gravity="center"
+            android:text="已取消"
+            android:textColor="@drawable/tv_color_selector" />
+
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/headViewContaner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+    <include layout="@layout/refresh_recyclerview_layout" />
+
+
+</LinearLayout>

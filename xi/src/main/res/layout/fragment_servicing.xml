@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayf0bg"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/x610"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@drawable/shape_stoke_corner_gray_white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x30">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y114"
+                android:gravity="center"
+                android:text="服务中..."
+                android:textColor="@color/green6ab840"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用浴位"
+                    android:textColor="@color/blue4DA9FF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/serving_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x30"
+                    android:text="---"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="洗澡时间"
+                    android:textColor="@color/blue4DA9FF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/serving_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x30"
+                    android:text="---"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="洗澡费用"
+                    android:textColor="@color/blue4DA9FF"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/serving_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x30"
+                    android:text="---"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_marginTop="@dimen/y33"
+                android:background="@color/line" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="开柜密码"
+                    android:textColor="@color/blue4DA9FF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/serving_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/service_hide"
+                    android:gravity="center_vertical"
+                    android:inputType="numberPassword"
+                    android:text="---"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/service_hide"
+                    style="@style/pwdcheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:paddingRight="@dimen/x30"
+                    android:src="@mipmap/kaiguimima_hide" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginRight="@dimen/x30"
+                android:background="@color/line"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="到时提醒"
+                    android:textColor="@color/gray999"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x100"
+            android:layout_marginRight="@dimen/x100"
+            android:layout_marginTop="@dimen/y80"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/home_tip2" />
+
+            <TextView
+                android:id="@+id/serving_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x40"
+                android:singleLine="true"
+                android:text="柜门关闭后才可结束洗澡流程"
+                android:textColor="@color/green6ab840"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/service_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/y50"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/refresh_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/refresh_servicing_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="刷新"
+            android:textColor="@color/blue4DA9FF"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/service_stop"
+        style="@style/textview40_white"
+        android:layout_width="@dimen/x710"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/selector_bg_corner_blue"
+        android:gravity="center"
+        android:text="@string/stop" />
+</LinearLayout>

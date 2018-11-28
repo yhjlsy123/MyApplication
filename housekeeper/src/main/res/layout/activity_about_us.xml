@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about_us"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.zhuochi.hydream.bathhousekeeper.activity.AboutUsActivity">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toobar_button"></include>
+
+    <com.zhuochi.hydream.bathhousekeeper.view.RoundedImageView
+        android:id="@+id/user_img"
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp18"
+        android:src="@mipmap/opinion_dialogue_two"
+        app:corner_radius="200px" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp18"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/apk_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/black666"
+            android:textSize="@dimen/dp13" />
+
+        <TextView
+            android:id="@+id/apk_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:textColor="@color/black666"
+            android:textSize="@dimen/dp13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/checkversion"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp15"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp22"
+                android:layout_weight="1"
+                android:text="@string/checkversion"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp22"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/new_function"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp22"
+                android:layout_weight="1"
+                android:text="@string/aboutus_new_function"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp22"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/abouy_company"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp22"
+                android:layout_weight="1"
+                android:text="@string/aboutus_company"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp22"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:text="@string/abount_company_permission"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="horizontal"
+        android:text="@string/abount_company_permission_e"></TextView>
+
+
+</LinearLayout>

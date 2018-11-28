@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/roll_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rollviewpager_play_delay="3000"
+                app:rollviewpager_hint_color="@color/white"
+                app:rollviewpager_hint_alpha="255"
+                >
+
+                <TextView
+                    android:id="@+id/bath_tv_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/red"
+                    android:textSize="32sp"
+                    android:text="网络异常，请联系管理员！"
+                    android:visibility="invisible"/>
+            </com.jude.rollviewpager.RollPagerView>
+            <TextClock
+                android:id="@+id/bath_tc_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:format24Hour="yyyy/MM/dd EEEE HH:mm:ss "
+                android:text="123"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <EditText
+                    android:id="@+id/bath_et_signkey"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="111" />
+
+                <Button
+                    android:id="@+id/bath_bt_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="#00000000"
+                    android:text="     " />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bath_bt_openwater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bt_begin_bg"
+                 />
+
+            <TextView
+                android:id="@+id/bathtextView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始"
+                android:textSize="24sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/bath_bt_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bt_box_bg"/>
+
+            <TextView
+                android:id="@+id/bathtextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="洗浴+储物"
+                android:textSize="24sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/bath_bt_closewater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bt_finish_bg"/>
+
+            <TextView
+                android:id="@+id/bathtextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束"
+                android:textSize="24sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ly_bath_version"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/tv_bath_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="版本"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

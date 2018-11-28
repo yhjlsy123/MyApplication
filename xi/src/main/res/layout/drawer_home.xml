@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/drawer_enter_info"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/selector_item_press_bg">
+
+        <RelativeLayout
+            android:id="@+id/drawer_info_photo_root"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginTop="30dp">
+
+            <com.isgala.xishuashua.view.RoundedImageView
+                android:id="@+id/drawer_photo"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:src="@mipmap/defaut_user_photo"
+                app:border_color="@color/blue4DA9FF"
+                app:border_width="@dimen/x1"
+                app:corner_radius="@dimen/x200"
+                app:layout_auto_basewidth="height" />
+
+            <ImageView
+                android:id="@+id/drawer_info_authe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/x5"
+                android:layout_marginRight="@dimen/x5"
+                android:src="@mipmap/user_info_authe"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="26dp"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginRight="@dimen/x40">
+
+            <TextView
+                android:id="@+id/drawer_nikename"
+                style="@style/textview30_black"
+                android:layout_centerInParent="true"
+                android:singleLine="true"
+                android:text="昵称" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_toRightOf="@+id/drawer_nikename"
+                android:src="@mipmap/xiugaiziliao_icon" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginRight="@dimen/x40"
+            android:background="@color/line" />
+    </RelativeLayout>
+
+    <com.isgala.xishuashua.view.CustomerScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/drawer_rank"
+        android:layout_below="@+id/drawer_enter_info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/drawer_money"
+                style="@style/textview30_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/y25"
+                android:background="@drawable/selector_item_press_bg"
+                android:drawableLeft="@mipmap/drawer_money"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:text="@string/drawer_money" />
+            <TextView
+                android:id="@+id/drawer_message"
+                style="@style/textview30_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_item_press_bg"
+                android:drawableLeft="@mipmap/masage_icon"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:visibility="gone"
+                android:text="@string/user_message" />
+            <TextView
+                android:id="@+id/drawer_record"
+                style="@style/textview30_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_item_press_bg"
+                android:drawableLeft="@mipmap/record"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:text="@string/drawer_record" />
+
+            <TextView
+                android:id="@+id/drawer_yijianfankui"
+                style="@style/textview30_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_item_press_bg"
+                android:drawableLeft="@mipmap/choice_yijianfankui"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:text="意见反馈" />
+
+            <TextView
+                android:id="@+id/drawer_resetpwd"
+                style="@style/textview30_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_item_press_bg"
+                android:drawableLeft="@mipmap/drawer_setting_pwd"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:text="重置密码" />
+
+            <TextView
+                android:id="@+id/drawer_changjianwenti"
+                style="@style/textview30_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_item_press_bg"
+                android:drawableLeft="@mipmap/chanjianwenti"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:text="常见问题" />
+
+            <TextView
+                android:id="@+id/setting_contact"
+                style="@style/textview30_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_item_press_bg"
+                android:drawableLeft="@mipmap/icon_lianxizhanzhang"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:text="@string/setting_call" />
+            <TextView
+                android:id="@+id/drawer_setting"
+                style="@style/textview30_black"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/selector_item_press_bg"
+                android:drawableLeft="@mipmap/setting"
+                android:drawablePadding="@dimen/x20"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40"
+                android:text="@string/setting" />
+        </LinearLayout>
+    </com.isgala.xishuashua.view.CustomerScrollView>
+
+    <LinearLayout
+        android:id="@+id/drawer_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/y36"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y24"
+            android:src="@mipmap/drawer_rank_upward"
+            android:visibility="gone"
+            app:layout_auto_basewidth="height" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/drawer_rank"
+            app:layout_auto_basewidth="height" />
+
+        <TextView
+            style="@style/textview30_black"
+            android:layout_marginTop="@dimen/y10"
+            android:text="@string/drawer_rank" />
+    </LinearLayout>
+</RelativeLayout>

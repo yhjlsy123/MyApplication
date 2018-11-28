@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.isgala.xishuashua.ui.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/origin_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/home_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/home_choice_bathroomlocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y98"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/home_bathroom_location"
+                style="@style/textview30_black"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x40"
+                android:drawableLeft="@mipmap/home_location"
+                android:drawablePadding="@dimen/x28" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x40"
+                android:src="@mipmap/arrow_down" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--轮播广告-->
+                <com.isgala.xishuashua.view.AutoHorizontalScrollTextView
+                    android:id="@+id/vertical_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/blue4DA9FF"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="@dimen/x388"
+                    android:layout_height="@dimen/y50"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/home_bathroom_status" />
+
+                <GridView
+                    android:id="@+id/home_list_gridview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/y80"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="0dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:overScrollMode="never"
+                    android:paddingLeft="@dimen/x35"
+                    android:paddingRight="@dimen/x35"
+                    android:scrollbars="none"
+                    android:verticalSpacing="@dimen/y20" />
+
+                <!--排队信息-->
+                <LinearLayout
+                    android:id="@+id/home_hint"
+                    android:layout_width="@dimen/x710"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_stoke_corner_gray_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/upline_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y150"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/upline_line1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/y5"
+                                        android:text="20"
+                                        android:textColor="@color/blue4DA9FF"
+                                        android:textSize="60px"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40px"
+                                        android:layout_marginLeft="@dimen/x20"
+                                        android:src="@mipmap/home_lineup_ren" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/y4"
+                                    android:text="@string/current_queue"
+                                    android:textColor="@color/blue4DA9FF"
+                                    android:textSize="30px" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/x1"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/y24"
+                                android:layout_marginTop="@dimen/y24"
+                                android:background="@mipmap/home_shuxian" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/upline_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="20"
+                                        android:textColor="@color/blue4DA9FF"
+                                        android:textSize="60px"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40px"
+                                        android:layout_marginLeft="@dimen/x20"
+                                        android:src="@mipmap/home_lineup_fen" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/y4"
+                                    android:text="@string/wait"
+                                    android:textColor="@color/blue4DA9FF"
+                                    android:textSize="30px" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y1"
+                            android:layout_alignParentBottom="true"
+                            android:background="@mipmap/home_hengxian" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20px">
+
+                        <ImageView
+                            android:layout_width="@dimen/x44"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/home_tip" />
+
+                        <TextView
+                            android:id="@+id/home_tip"
+                            style="@style/textview28_black"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginTop="@dimen/y8"
+                            android:lineSpacingExtra="@dimen/y8"
+                            android:maxLines="2"
+                            android:textSize="28px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/origin_next"
+                    style="@style/textview40_white"
+                    android:layout_width="@dimen/x710"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/selector_bg_corner_blue"
+                    android:gravity="center"
+                    android:text="@string/appoint" />
+            </LinearLayout>
+            <!--选择浴室的图层-->
+            <RelativeLayout
+                android:id="@+id/origin_filter_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6000"
+                android:visibility="gone">
+
+                <ScrollView
+                    android:id="@+id/scrollview_choiceroom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:overScrollMode="never"
+                    android:scrollbarStyle="outsideOverlay">
+
+                    <com.isgala.xishuashua.view.CustomListView
+                        android:id="@+id/choiceroom_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"
+                        android:listSelector="@drawable/selector_item_press_bg" />
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/grayeee"
+                    android:paddingLeft="@dimen/x30"
+                    android:paddingRight="@dimen/x20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="浴室"
+                        android:textColor="@color/black666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="空闲/总计"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/filter_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/scrollview_choiceroom" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/origin_errbg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e000"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/origin_errtip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/x60"
+            android:layout_marginRight="@dimen/x60"
+            android:gravity="center"
+            android:lineSpacingExtra="4px"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</FrameLayout>

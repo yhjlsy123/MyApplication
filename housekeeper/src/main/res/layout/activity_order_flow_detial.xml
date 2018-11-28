@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.OrderFlowDetialActivity"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toobar_button" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/type_txt_img"
+            android:padding="@dimen/dp16"
+            android:gravity="center"
+            android:drawablePadding="@dimen/dp20"
+            android:drawableLeft="@mipmap/consumptiondetails_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="洗浴资金"
+            android:textSize="@dimen/dp24"
+            android:textColor="@color/black333"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height= "wrap_content"
+            android:text=""
+            android:textColor="@color/red_fe0000"
+            android:textSize="@dimen/dp35"/>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray999"
+            android:textSize="@dimen/dp20"
+            android:text="总销售额"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20">
+
+            <TextView
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text="订单总金额"/>
+
+            <TextView
+                android:id="@+id/order_amount"
+                android:layout_alignParentRight="true"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20">
+
+            <TextView
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text="订单数量"/>
+
+            <TextView
+                android:id="@+id/num"
+                android:layout_alignParentRight="true"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green_25bd33"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20">
+
+            <TextView
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text="客单价"/>
+
+            <TextView
+                android:id="@+id/order_avage_price"
+                android:layout_alignParentRight="true"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20">
+
+            <TextView
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text="本金扣款扣除"/>
+
+            <TextView
+                android:id="@+id/cash_amount"
+                android:layout_alignParentRight="true"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20">
+
+            <TextView
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text="赠款支付"/>
+
+            <TextView
+                android:id="@+id/coupon_amount"
+                android:layout_alignParentRight="true"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green_25bd33"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20">
+
+            <TextView
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text="时间"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_alignParentRight="true"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray999"
+                android:text=""/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:background="@color/line"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:padding="@dimen/dp20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_system"
+                android:text="说明"/>
+
+            <TextView
+                android:paddingLeft="@dimen/dp18"
+                android:paddingRight="@dimen/dp70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_system"
+                android:lineSpacingExtra="2dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="订单金额减去本金金额,再减去赠款支付金额即为总销售金额"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

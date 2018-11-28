@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp10"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:drawableLeft="@mipmap/managenent_activity_icon"
+            android:drawablePadding="@dimen/dp10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/black333"
+            android:textSize="@dimen/dp15"
+            android:text="标题:  "/>
+
+        <TextView
+            android:id="@+id/exercie_title"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black333"
+            android:textSize="@dimen/dp15"
+            android:text="超级澡堂免费体验啦"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:paddingLeft="@dimen/dp40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="活动校区:  "/>
+
+        <TextView
+            android:id="@+id/exercie_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知:"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:paddingLeft="@dimen/dp40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="活动类型:  "/>
+
+        <TextView
+            android:id="@+id/exercie_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免费:"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:paddingLeft="@dimen/dp40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="性别:  "/>
+
+        <TextView
+            android:id="@+id/exercie_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不限:"/>
+
+    </LinearLayout>
+    <View
+      style="@style/view_all"/>
+</LinearLayout>

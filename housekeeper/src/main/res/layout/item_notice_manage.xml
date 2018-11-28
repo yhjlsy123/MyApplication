@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp10"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/dp10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:drawableLeft="@drawable/management_notice_icon"
+            android:drawablePadding="@dimen/dp10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/dp15"
+            android:textColor="@color/black333"
+            android:text="学校:"/>
+
+        <TextView
+            android:id="@+id/notice_school_name"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp15"
+            android:textColor="@color/black333"
+            android:text="青岛海洋大学"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:paddingLeft="@dimen/dp40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="公告内容:"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:paddingLeft="@dimen/dp40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="通知:  "/>
+
+        <TextView
+            android:id="@+id/notice_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知:"/>
+
+    </LinearLayout>
+
+</LinearLayout>

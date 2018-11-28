@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/item_history_create"
+        style="@style/textview28_black"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="2017-01-23" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.isgala.xishuashua.view.RoundedImageView
+            android:id="@+id/item_history_userphoto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/defaut_user_photo"
+            app:border_color="@color/blue4DA9FF"
+            app:border_width="@dimen/x1"
+            app:corner_radius="@dimen/x200"
+            app:layout_auto_basewidth="height" />
+
+        <TextView
+            android:id="@+id/item_history_content"
+            style="@style/textview28_black"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:background="@drawable/shape_stoke_corner_gray_white"
+            android:padding="30px"
+       />
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30px" />
+
+    <RelativeLayout
+        android:id="@+id/item_history_system_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="30px">
+
+        <TextView
+            android:id="@+id/item_history_feedback_system"
+            style="@style/textview28_black"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:background="@drawable/shape_stoke_corner_gray_white"
+            android:padding="30px"
+            android:text="sddfjsdadfljlsjadf" />
+
+        <com.isgala.xishuashua.view.RoundedImageView
+            android:id="@+id/item_history_systemphoto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/defaut_user_photo"
+            app:border_color="@color/blue4DA9FF"
+            app:border_width="@dimen/x1"
+            app:corner_radius="@dimen/x200"
+            app:layout_auto_basewidth="height" />
+    </RelativeLayout>
+</LinearLayout>

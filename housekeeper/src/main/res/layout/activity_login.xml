@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_system"
+    android:fitsSystemWindows="true"
+    tools:context="com.zhuochi.hydream.bathhousekeeper.activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp100"
+            android:background="@color/blue_system" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/blue_system" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.zhuochi.hydream.bathhousekeeper.view.RoundedImageView
+                android:id="@+id/my_company_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp70"
+                android:background="@mipmap/ic_launcher"
+                app:border_color="@color/blue_system"
+                app:border_width="@dimen/x2"
+                app:corner_radius="@dimen/x200" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp25"
+                android:src="@mipmap/login_name" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp40">
+
+                <LinearLayout
+                    android:id="@+id/line_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_bg_corner_gray_white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp30"
+                    android:paddingLeft="@dimen/dp40"
+                    android:paddingRight="@dimen/dp40"
+                    android:paddingTop="@dimen/dp20">
+
+                    <EditText
+                        android:id="@+id/user_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y60"
+                        android:background="@android:color/transparent"
+                        android:cursorVisible="true"
+                        android:drawableLeft="@mipmap/user"
+                        android:drawablePadding="@dimen/x40"
+                        android:singleLine="true"
+                        android:hint="昵称/手机号"
+                        android:maxLength="12"
+                        android:textColorHint="@color/gray999"
+                        android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@color/gray_system" />
+
+                    <EditText
+                        android:id="@+id/user_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y60"
+                        android:background="@android:color/transparent"
+                        android:cursorVisible="true"
+                        android:drawableLeft="@mipmap/password"
+                        android:drawablePadding="@dimen/x40"
+                        android:hint="密码"
+                        android:inputType="textPassword"
+                        android:maxLength="12"
+                        android:textColorHint="@color/gray999"
+                        android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@color/gray_system" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/back_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dp25"
+                            android:background="@null"
+                            android:text="@string/back_password"
+                            android:textColor="@color/black666"
+                            android:textSize="@dimen/dp15" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    style="@style/login_btn_new"
+                    android:layout_below="@+id/line_content"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:layout_marginRight="@dimen/dp40"
+                    android:layout_marginTop="-20dp"
+                    android:text="登录" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_quickLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp15"
+            android:drawableRight="@mipmap/arroww_login"
+            android:text="@string/login_quick"
+            android:textColor="@color/black333"
+            android:textSize="@dimen/dp15" />
+    </LinearLayout>
+</RelativeLayout>

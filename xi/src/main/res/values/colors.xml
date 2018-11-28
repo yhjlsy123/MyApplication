@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#f000</color>
+    <color name="colorAccent">#fff</color>
+
+    <!--自定义颜色-->
+    <color name="black">#f000</color>
+    <color name="black333">#333</color>
+    <color name="black666">#666</color>
+    <color name="white">#ffff</color>
+    <color name="line">#d0d0d0</color>
+    <color name="gray999">#999</color>
+    <color name="gray959595">#959595</color>
+    <color name="grayeee">#eee</color>
+    <color name="grayf0bg">#f0f0f0</color>
+    <color name="blue4DA9FF">#4DA9FF</color>
+    <color name="bluepress">#108ee9</color>
+    <color name="green6ab840">#6ab840</color>
+    <color name="redfb3829">#fb3829</color>
+    <color name="bg_toast">#A0000000</color>
+    <color name="__picker_black_40">#A0000000</color>
+
+
+</resources>

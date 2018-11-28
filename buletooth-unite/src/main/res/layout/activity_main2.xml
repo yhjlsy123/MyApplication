@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="" />
+
+   <LinearLayout
+       android:id="@+id/layout_water"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+       <TextView
+           android:layout_marginTop="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="16sp"
+           android:text="选择登记的设备类型：" />
+
+       <RadioGroup
+           android:layout_marginTop="5dp"
+           android:id="@+id/radio_water"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <RadioButton
+               android:layout_marginTop="5dp"
+               android:id="@+id/radioButton1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="热水表 0" />
+           <RadioButton
+               android:layout_marginTop="5dp"
+               android:id="@+id/radioButton2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="饮水机 1" />
+           <RadioButton
+               android:layout_marginTop="5dp"
+               android:id="@+id/radioButton3"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="吹风机 3" />
+
+       </RadioGroup>
+
+       <Button
+           android:id="@+id/water_btn"
+           android:layout_marginTop="30dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="30dp"
+           android:layout_marginRight="30dp"
+           android:text="设备登记" />
+
+
+   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_washing"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="选择登记的设备类型：" />
+        <RadioGroup
+            android:layout_marginTop="5dp"
+            android:id="@+id/radio_washing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="室内洗衣机 2(46)" />
+            <RadioButton
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButton6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="走廊洗衣机 2(45)" />
+
+        </RadioGroup>
+        <Button
+            android:id="@+id/washing_btn"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="设备登记" />
+    </LinearLayout>
+</LinearLayout>  

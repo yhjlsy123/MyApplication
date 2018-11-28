@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="base_color">#18a4ec</color>
+    
+    <color name="red">#e60111</color>
+    
+    <color name="line_bg">#F0F0F0</color>
+    <color name="lightgray">#CDCDCD</color>
+<!--     <color name="gray">#ACA99E</color> -->
+    <color name="grey">#151515</color>
+<!--     <color name="dark_grey">#222222</color> -->
+    <color name="edit_bg">#F3F3F3</color>
+    
+    <color name="blue">#00AEEE</color>
+    
+    <color name="text_color">#393939</color>
+    
+    <color name="list_select">#ececec</color>
+</resources>

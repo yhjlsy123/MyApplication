@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/hair_rly1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+        <com.jude.rollviewpager.RollPagerView
+            android:id="@+id/hair_roll_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rollviewpager_play_delay="3000"
+            app:rollviewpager_hint_color="@color/white"
+            app:rollviewpager_hint_alpha="255"
+            />
+        <TextClock
+            android:id="@+id/hair_tc_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:format24Hour="yyyy/MM/dd EEEE HH:mm:ss " />
+        <!--<com.daimajia.slider.library.SliderLayout-->
+            <!--android:id="@+id/hair_slider"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--custom:auto_cycle="true"-->
+            <!--custom:indicator_visibility="visible"-->
+            <!--custom:pager_animation="Accordion"-->
+            <!--custom:pager_animation_span="1100" >-->
+
+        <!--</com.daimajia.slider.library.SliderLayout>-->
+
+        <!--<com.daimajia.slider.library.Indicators.PagerIndicator-->
+            <!--android:id="@+id/hair_custom_indicator"-->
+            <!--style="@style/AndroidImageSlider_Corner_Oval_Orange"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="50dp"-->
+            <!--custom:selected_height="50dp"-->
+            <!--custom:selected_padding_left="30dp"-->
+            <!--custom:selected_padding_right="30dp"-->
+            <!--custom:selected_width="50dp"-->
+            <!--custom:unselected_height="40dp"-->
+            <!--custom:unselected_padding_left="30dp"-->
+            <!--custom:unselected_padding_right="30dp"-->
+            <!--custom:unselected_width="40dp">-->
+
+        <!--</com.daimajia.slider.library.Indicators.PagerIndicator>-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/hair_ll1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        custom:srcCompat="@drawable/new_chuifengji_big" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="一号设备" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <Button
+                        android:id="@+id/hair_bt_admin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="#00000000"
+                        android:text="     " />
+                    <TextView
+                        android:id="@+id/hair_tv_left_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="剩余时间:"
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="34sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/hair_bt_left_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selector_bt_hair_bg"
+                        android:text="3分钟"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/hair_left_cdtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="00:00"
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="34sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/hair_bt_left_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selector_bt_hair_bg"
+                        android:text="5分钟"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        custom:srcCompat="@drawable/new_chuifengji_big" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="二号设备" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/hair_tv_right_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="剩余时间:"
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="34sp"
+
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/hair_bt_right_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selector_bt_hair_bg"
+                        android:text="3分钟"
+
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/hair_right_cdtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="00:00"
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="34sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/hair_bt_right_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selector_bt_hair_bg"
+                        android:text="5分钟"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/tv_hair_version"
+                        android:text="版本"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                         />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

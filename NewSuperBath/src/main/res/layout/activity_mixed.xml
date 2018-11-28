@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/mixed_roll_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rollviewpager_play_delay="3000"
+                app:rollviewpager_hint_color="@color/white"
+                app:rollviewpager_hint_alpha="255"
+                />
+            <TextClock
+                android:id="@+id/mixed_tc_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:format24Hour="yyyy/MM/dd EEEE HH:mm:ss "
+                android:text="123"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <EditText
+                        android:id="@+id/mixed_et_signkey"
+                        android:layout_gravity="top"
+                        android:layout_width="1dp"
+                        android:layout_height="1dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:text="111" />
+
+
+                    <ImageView
+                        android:id="@+id/mixed_imageView1"
+                        android:background="@drawable/new_chuifengji_big"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/mixed_textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一号设备" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/mixed_bt_admin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="#00000000"
+                        android:text="     " />
+                    <TextView
+                        android:id="@+id/mixed_tv_left_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="剩余时间:"
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="24sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/mixed_bt_left_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selector_bt_hair_bg"
+                        android:text="3分钟"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/mixed_left_cdtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="00:00"
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="34sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/mixed_bt_left_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selector_bt_hair_bg"
+                        android:text="5分钟"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/mixed_bt_openwater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bt_begin_bg"
+                />
+
+            <TextView
+                android:id="@+id/mixed_textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始"
+                android:textSize="24sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/mixed_bt_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bt_box_bg"/>
+
+            <TextView
+                android:id="@+id/mixed_textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="洗浴+储物"
+                android:textSize="24sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/mixed_bt_closewater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bt_finish_bg"/>
+
+            <TextView
+                android:id="@+id/mixed_textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束"
+                android:textSize="24sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/mixed_imageView2"
+                        android:background="@drawable/new_chuifengji_big"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/mixed_textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="二号设备" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_mix_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:singleLine="true"
+                    android:text="版本" />
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/mixed_tv_right_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="剩余时间:"
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="24sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/mixed_bt_right_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selector_bt_hair_bg"
+                        android:text="3分钟"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/mixed_right_cdtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="00:00"
+                        android:textColor="@color/deepskyblue"
+                        android:textSize="34sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/mixed_bt_right_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/selector_bt_hair_bg"
+                        android:text="5分钟"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

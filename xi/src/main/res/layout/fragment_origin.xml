@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/origin_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.isgala.xishuashua.ui.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/home_choice_bathroomlocation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y98">
+
+        <TextView
+            style="@style/textview30_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x40"
+            android:drawableLeft="@mipmap/red_stroke_circle"
+            android:drawablePadding="@dimen/x16"
+            android:text="@string/bathroom_location" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="@dimen/y98"
+            android:layout_marginLeft="@dimen/x240"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/home_bathroom_location"
+            style="@style/textview30_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x270" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x40"
+            android:src="@mipmap/arrow_down" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.isgala.xishuashua.view.AutoHorizontalScrollTextView
+                android:id="@+id/vertical_textview"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/blue4DA9FF"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y88">
+
+                <TextView
+                    style="@style/textview28_999gray"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:drawableLeft="@mipmap/red_stroke_circle"
+                    android:drawablePadding="@dimen/x16"
+                    android:text="@string/bathroom_choice" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x40"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/home_using_icon_small"
+                        app:layout_auto_basewidth="height" />
+
+                    <TextView
+                        style="@style/textview28_999gray"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:text="@string/bathroom_using" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x50"
+                        android:src="@mipmap/home_use_icon_small"
+                        app:layout_auto_basewidth="height" />
+
+                    <TextView
+                        style="@style/textview28_999gray"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:text="@string/bathroom_use" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <GridView
+                android:id="@+id/home_list_gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/x35"
+                android:layout_marginRight="@dimen/x35"
+                android:layout_weight="1"
+                android:horizontalSpacing="0dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:verticalSpacing="@dimen/y20">
+
+            </GridView>
+
+            <LinearLayout
+                android:id="@+id/home_hint"
+                android:layout_width="@dimen/x710"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_stoke_corner_gray_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/upline_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y145"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y5"
+                                android:text="@string/current_queue"
+                                android:textColor="@color/black333"
+                                android:textSize="30px" />
+
+                            <TextView
+                                android:id="@+id/upline_line1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y8"
+                                android:text="20"
+                                android:textColor="@color/blue4DA9FF"
+                                android:textSize="40px" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/x1"
+                            android:layout_height="match_parent"
+                            android:background="@color/line" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y5"
+                                android:text="@string/wait"
+                                android:textColor="@color/black333"
+                                android:textSize="30px" />
+
+                            <TextView
+                                android:id="@+id/upline_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y8"
+                                android:text="20"
+                                android:textColor="@color/blue4DA9FF"
+                                android:textSize="40px" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y1"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_marginRight="@dimen/x20"
+                        android:background="@color/line" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20px">
+
+                    <TextView
+                        style="@style/textview28_black"
+                        android:drawableLeft="@mipmap/red_stroke_circle"
+                        android:drawablePadding="@dimen/x16"
+                        android:text="@string/freightBasis"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:id="@+id/home_tip"
+                        style="@style/textview28_black"
+                        android:layout_marginLeft="6px"
+                        android:maxLines="2"
+                        android:textSize="28px" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/origin_next"
+                style="@style/textview40_white"
+                android:layout_width="@dimen/x710"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_bg_corner_blue"
+                android:gravity="center"
+                android:text="@string/appoint" />
+        </LinearLayout>
+        <!--选择浴室的图层-->
+        <RelativeLayout
+            android:id="@+id/origin_filter_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6000"
+            android:visibility="gone">
+
+            <ScrollView
+                android:id="@+id/scrollview_choiceroom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:overScrollMode="never"
+                android:scrollbarStyle="outsideOverlay">
+
+                <com.isgala.xishuashua.view.CustomListView
+                    android:id="@+id/choiceroom_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:listSelector="@drawable/selector_item_press_bg" />
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/x30"
+                android:paddingRight="@dimen/x30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="浴室"
+                    android:textColor="@color/black666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="空闲/总计"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/filter_footer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/scrollview_choiceroom" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

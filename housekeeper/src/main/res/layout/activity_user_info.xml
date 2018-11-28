@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_system"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.zhuochi.hydream.bathhousekeeper.activity.UserInfoActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toobar_button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.zhuochi.hydream.bathhousekeeper.view.RoundedImageView
+            android:id="@+id/user_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="22dp"
+            android:src="@mipmap/opinion_dialogue_two"
+            app:corner_radius="200px" />
+
+        <TextView
+            android:id="@+id/tv_updateImg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="修改头像" />
+
+        <ImageView
+            android:id="@+id/user_img_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:src="@mipmap/my_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_weight="1"
+            android:text="@string/user_info_account" />
+
+        <TextView
+            android:id="@+id/user_info_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:text="" />
+    </LinearLayout>
+
+    <View style="@style/view_all" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_weight="1"
+            android:text="@string/user_info_name" />
+
+        <TextView
+            android:id="@+id/user_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:text="" />
+    </LinearLayout>
+
+    <View style="@style/view_all" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_weight="1"
+            android:text="@string/user_info_phone" />
+
+        <TextView
+            android:id="@+id/user_info_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:text="" />
+    </LinearLayout>
+
+    <View style="@style/view_all" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_weight="1"
+            android:text="@string/user_info_company" />
+
+        <TextView
+            android:id="@+id/user_info_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:text="" />
+    </LinearLayout>
+
+    <View style="@style/view_all" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_weight="1"
+            android:text="@string/user_info_company_phone" />
+
+        <TextView
+            android:id="@+id/user_info_company_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:text="" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/user_info_button"
+        style="@style/login_btn_new"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:text="完成" />
+</LinearLayout>

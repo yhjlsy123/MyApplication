@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="head_height">48dp</dimen>
+    <dimen name="title_text_size">18dp</dimen>
+    <dimen name="title_back_text_size">14dp</dimen>
+
+
+    <dimen name="dialog_padding">25dp</dimen>
+    <dimen name="my_item_height">40dp</dimen>
+
+    <dimen name="my_item_text_size">14dp</dimen>
+
+    <dimen name="bluetooth_circle1">200dp</dimen>
+    <dimen name="bluetooth_circle2">230dp</dimen>
+    <dimen name="bluetooth_circle3">260dp</dimen>
+
+    <dimen name="xizao_circle">240dp</dimen>
+    
+</resources>

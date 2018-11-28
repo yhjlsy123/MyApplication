@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayf0bg"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/feedback_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@drawable/selector_back" />
+
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <com.isgala.xishuashua.view.CustomerScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.isgala.xishuashua.view.CustomGridView
+                android:id="@+id/feedback_type_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:numColumns="3"
+                android:verticalSpacing="@dimen/dp5"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/feedback_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y380"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_marginTop="@dimen/y20"
+                android:background="@drawable/shape_stoke_corner_gray_white"
+                android:cursorVisible="true"
+                android:gravity="left"
+                android:hint="您的只言片语,我们随时聆听"
+                android:maxLength="300"
+                android:padding="@dimen/x22"
+                android:textColor="@color/gray959595"
+                android:textColorHint="@color/gray959595"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/feedback_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x44"
+                android:layout_marginTop="@dimen/y16"
+                android:text="还可以输入300个字符"
+                android:textColor="@color/gray959595"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/feedback_commit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x20"
+                android:layout_marginTop="@dimen/y60"
+                android:background="@drawable/selector_bg_corner_blue"
+                android:text="提 交"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+            <!--意见反馈历史-->
+            <LinearLayout
+                android:id="@+id/feedback_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="160px"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/x160"
+                        android:layout_height="1px"
+                        android:background="@color/line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:layout_marginRight="@dimen/x30"
+                        android:text="历史记录"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="@dimen/x160"
+                        android:layout_height="1px"
+                        android:background="@color/line" />
+                </LinearLayout>
+
+                <com.isgala.xishuashua.view.CustomListView
+                    android:id="@+id/feedback_history_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.isgala.xishuashua.view.CustomerScrollView>
+</LinearLayout>

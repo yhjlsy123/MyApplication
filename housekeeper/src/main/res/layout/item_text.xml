@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp2"
+    android:background="@color/white"
+    android:padding="@dimen/dp10"
+    android:descendantFocusability="blocksDescendants"
+    android:focusableInTouchMode="false"
+    android:touchscreenBlocksFocus="false">
+
+    <TextView
+        android:id="@+id/area_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="哈哈"
+        android:textSize="@dimen/dp18" />
+
+
+    <CheckBox
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ck_color_selector"
+        android:button="@null" />
+</RelativeLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/pay_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@drawable/selector_back" />
+
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="赠送"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_type"
+            style="@style/textview28_black"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:text="类          型 ："
+            android:textColor="@color/black333"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_toRightOf="@+id/txt_type"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_select_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:hint="请选择赠送类型"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/y4"
+                android:background="@color/line" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_money"
+            style="@style/textview28_black"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:text="转 账 金 额："
+            android:textColor="@color/black333"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/line_money"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_toRightOf="@+id/txt_money"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_input_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:hint="请输入赠款金额"
+                android:textColorHint="@color/gray999"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtKY"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp40"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:text="可用"
+                android:textColor="@color/__picker_black_40"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txt_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/txtKY"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:text="0元"
+                android:textColor="@color/red"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_c"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/txt_money"
+            android:background="@color/line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_phone"
+            style="@style/textview28_black"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:text="对方手机号:"
+            android:textColor="@color/black333"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_toRightOf="@+id/txt_phone"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txt_input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:hint="请输入对方手机号码"
+                android:layout_marginLeft="5dp"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColorHint="@color/gray999"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/y4"
+                android:background="@color/line" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y80"
+        android:layout_marginTop="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/txt_auto"
+            style="@style/textview28_black"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:text="验   证   码 ："
+            android:textColor="@color/black333"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_toLeftOf="@+id/login_code"
+            android:layout_toRightOf="@+id/txt_auto"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/login_input_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:hint="@string/input_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColorHint="@color/gray999"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/y4"
+                android:background="@color/line" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_code"
+            android:layout_width="@dimen/x280"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/selector_corner_blue_white"
+            android:gravity="center"
+            android:text="@string/login_code"
+            android:textColor="@color/blue4DA9FF"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_enter"
+        style="@style/textview40_white"
+        android:layout_width="@dimen/x710"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_bg_corner_blue"
+        android:gravity="center"
+        android:text="@string/confirm" />
+</LinearLayout>

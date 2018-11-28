@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp5"
+    android:padding="@dimen/dp10"
+    android:background="@color/white"
+     >
+
+    <TextView
+        android:id="@+id/date"
+        android:gravity="center"
+        android:drawableLeft="@mipmap/water_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总销售额"
+        android:drawablePadding="@dimen/dp20"
+        android:textSize="@dimen/dp16"
+        android:textColor="@color/gray999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp5">
+
+        <LinearLayout
+            android:id="@+id/sss"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_number"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow_fcb23b"
+                android:text="5552255"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单数"
+                android:paddingTop="@dimen/dp10"
+                android:drawablePadding="@dimen/dp10"
+                android:textColor="@color/gray999"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sell_number"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="654654545"
+                android:textColor="@color/yellow_fcb23b"
+                android:drawablePadding="@dimen/dp10"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp10"
+                android:textColor="@color/gray999"
+                android:text="销售额"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

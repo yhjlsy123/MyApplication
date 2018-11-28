@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp40"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_hinMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓   名："
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/tv_hinMoney"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tv_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/dp14" />
+        <TextView
+            android:layout_toLeftOf="@+id/tv_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学     校："
+            android:textSize="@dimen/dp14" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_hinType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号："
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/tv_hinType"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tv_campus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/dp14" />
+        <TextView
+            android:layout_toLeftOf="@+id/tv_campus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="校     区："
+            android:textSize="@dimen/dp14" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_hinCampus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="押    金："
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tv_tv_deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/tv_hinCampus"
+            android:textSize="@dimen/dp14" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/dp14" />
+        <TextView
+            android:layout_toLeftOf="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时     间："
+            android:textSize="@dimen/dp14" />
+    </RelativeLayout>
+    <View
+        style="@style/view_all"
+        android:layout_marginLeft="@dimen/dp22"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/dp22"/>
+</LinearLayout>

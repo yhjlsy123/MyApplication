@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'NewSuperBath'
+            keyPassword 'zc12345'
+            storeFile file('E:/wokespace/MyApplication/NewSuperBath/SuperBathCumquat.jks')
+            storePassword 'zc12345'
+        }
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.xinglincloud.www.newsuperbath"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 30
+        versionName "V5.4.10 Damson"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+    }
+}
+repositories {
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-releases/"
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation files('libs/endecode.jar')
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.jude:rollviewpager:1.4.6'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation files('libs/smdt.jar')
+    implementation 'org.litepal.android:core:1.5.0'
+    //二维码
+    implementation 'com.singleshu:ZxingPlus:1.1.3'
+}

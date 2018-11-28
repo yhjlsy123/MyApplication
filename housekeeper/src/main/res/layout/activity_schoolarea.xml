@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayf0bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/schoolarea_back"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:paddingLeft="@dimen/x20"-->
+            <!--android:paddingRight="@dimen/x20"-->
+            <!--android:src="@drawable/selector_back" />-->
+        <ImageView
+            android:id="@+id/userinfo_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@drawable/left_arrow" />
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="@string/choice_schoolorg_title"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/line" />
+
+    <ExpandableListView
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/schoolarealist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:childDivider="@null"
+        android:divider="@null"
+        android:groupIndicator="@null" />
+</LinearLayout>

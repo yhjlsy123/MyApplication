@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_rank_number"
+            style="@style/textview30_black"
+            android:layout_marginLeft="@dimen/x62"
+            android:text="1" />
+
+        <com.isgala.xishuashua.view.RoundedImageView
+            android:id="@+id/item_rank_photo"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_marginLeft="@dimen/x30"
+            app:corner_radius="36dp" />
+
+        <TextView
+            android:id="@+id/item_rank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:text="张三"
+            android:textColor="@color/gray999"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/item_rank_usetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="@dimen/x62"
+            android:text="3'44''"
+            android:textColor="@color/gray999"
+            android:textSize="15sp" />
+    </LinearLayout>
+</FrameLayout>

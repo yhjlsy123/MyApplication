@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loonggg="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bg"
+    android:fitsSystemWindows="true"
+    tools:context="com.isgala.xishuashua.ui.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/origin_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.isgala.xishuashua.view.AutoHorizontalScrollTextView
+            android:id="@+id/txt_auto"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/blue4DA9FF"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+
+        <com.isgala.xishuashua.view.RecyclerViewBanner
+            android:id="@+id/rv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_below="@id/txt_auto"
+            loonggg:interval="3000"
+            loonggg:isShowPoint="true" />
+
+        <ImageView
+            android:id="@+id/img_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_banner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/icon_home_middle" />
+
+        <ImageView
+            android:id="@+id/img_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_txt"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/icon_home_middle_but_s"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_onclick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/selector_home_start"
+            android:text="点击进行时"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+
+</FrameLayout>

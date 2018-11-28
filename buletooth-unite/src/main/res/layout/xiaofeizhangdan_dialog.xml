@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/edit_bg" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="2dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="消费订单"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/my_item_text_size" >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="timeId"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/timeid_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="productId:"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/productid_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="deviceID"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/deviceid_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="accountId"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/accountid_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="accountType"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/accounttype_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="userCount"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/usercount_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="ykMoney"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/ykmoney_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="consumeMone"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/consumeMone_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="rate"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/rate_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_item_height"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="MAC"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/my_item_text_size" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/mac_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:paddingLeft="10dp" >
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

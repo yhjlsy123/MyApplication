@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ly_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    >
+    <TextClock
+        android:id="@+id/tc_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:format24Hour="yyyy/MM/dd EEEE HH:mm:ss " />
+
+
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="470dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shurukuang"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:textSize="46sp"
+        android:inputType="number"
+        android:hint="密码：请输入您的密码"
+        android:maxLength="12"
+        android:imeOptions="flagNoExtractUi"
+        />
+    <Button
+        android:id="@+id/bt_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:background="@drawable/selector_bt_login_bg"
+        android:text="确认"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/bt_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView"
+        android:background="@drawable/selector_bt_login_bg"
+        android:text="返回"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        custom:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/bt_pass"
+        android:layout_width="51dp"
+        android:layout_height="32dp"
+        android:layout_toEndOf="@+id/bt_cancel"
+        android:layout_alignBaseline="@+id/et_password"
+        android:background="@drawable/yincang" />
+    <include
+        layout="@layout/include_keyboardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

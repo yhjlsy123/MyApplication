@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/pay_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@drawable/selector_back" />
+
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="支付费用"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:id="@+id/pay_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/payresult_rl"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/pay"
+                android:layout_width="@dimen/x570"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_bg_corner_blue"
+                android:gravity="center"
+                android:text="确认支付 0.00"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <com.isgala.xishuashua.view.CustomerScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/payresult_rl">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_stroke_gray_backgroud"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/x42"
+                    android:paddingRight="@dimen/x42">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            style="@style/textview30_black"
+                            android:layout_alignBottom="@+id/pay_danwei"
+                            android:gravity="center_vertical"
+                            android:text="费用合计" />
+
+                        <TextView
+                            android:id="@+id/pay_money"
+                            style="@style/textview30_black"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/pay_danwei"
+                            android:text="0"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/pay_danwei"
+                            style="@style/textview30_black"
+                            android:layout_alignBottom="@+id/pay_money"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:text="元" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y1"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/line" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp">
+
+                        <TextView
+                            style="@style/textview30_black666"
+                            android:text="用时" />
+
+                        <TextView
+                            android:id="@+id/use_time"
+                            style="@style/textview30_black666"
+                            android:layout_alignParentRight="true"
+                            android:text="0min" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pay_quest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:drawableLeft="@mipmap/call_icon"
+                        android:drawablePadding="@dimen/x20"
+                        android:gravity="center"
+                        android:text="对费用有疑问?"
+                        android:textColor="@color/blue4DA9FF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y58"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingRight="@dimen/x20">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y1"
+                        android:layout_weight="1"
+                        android:background="@color/line" />
+
+                    <TextView
+                        style="@style/textview30_black"
+                        android:layout_marginLeft="@dimen/x12"
+                        android:text="支付方式" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/y1"
+                        android:layout_marginLeft="@dimen/x12"
+                        android:layout_weight="1"
+                        android:background="@color/line" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pay_yue"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_item_press_bg">
+
+                    <TextView
+                        style="@style/textview30_black"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/yuezhifu_icon"
+                        android:drawablePadding="@dimen/x30"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/x20"
+                        android:paddingRight="@dimen/x20"
+                        android:text="余额支付" />
+
+
+                    <ImageView
+                        android:id="@+id/yue_pay_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@mipmap/pay_check" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/yue_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x96"
+                        android:layout_marginRight="@dimen/x40"
+                        android:layout_weight="1"
+                        android:text="(剩余 0.00)"
+                        android:textColor="#959595"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/pay_recharage"
+                        android:layout_width="115dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/x20"
+                        android:background="@drawable/selector_bg_corner_blue"
+                        android:gravity="center"
+                        android:text="去充值"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/line" />
+
+                <RelativeLayout
+                    android:id="@+id/pay_weixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_item_press_bg"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/textview30_black"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/weixinzhifu_icon"
+                        android:drawablePadding="@dimen/x30"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/x20"
+                        android:paddingRight="@dimen/x20"
+                        android:text="微信支付" />
+
+                    <ImageView
+                        android:id="@+id/weixin_pay_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@mipmap/pay_uncheck" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pay_zhifubao"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_item_press_bg"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/textview30_black"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:drawableLeft="@mipmap/zhifubo_icon"
+                        android:drawablePadding="@dimen/x30"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/x20"
+                        android:text="支付宝支付" />
+
+                    <ImageView
+                        android:id="@+id/zhifubao_pay_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@mipmap/pay_uncheck" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/recharge_one_card_solution"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_item_press_bg"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/textview30_black"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:drawableLeft="@mipmap/icon_one_card_solution"
+                        android:drawablePadding="@dimen/x30"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/x20"
+                        android:text="一卡通支付" />
+
+                    <ImageView
+                        android:id="@+id/onecard_recharge_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x20"
+                        android:src="@mipmap/pay_uncheck" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.isgala.xishuashua.view.CustomerScrollView>
+    </RelativeLayout>
+</LinearLayout>
