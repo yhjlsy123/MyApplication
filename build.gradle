@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = '1.2.50'
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+        }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.tencent.bugly:symtabfileuploader:latest.release'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.bugtags.library:bugtags-gradle:latest.integration'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+//新加
+        mavenCentral()
+        jcenter()
+        //新加
+        mavenLocal()
+        google()
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
