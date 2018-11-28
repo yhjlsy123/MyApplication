@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/userinfo_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="@string/user_oneCard"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/line_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_item_press_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x30"
+                android:text="@string/one_card_solution"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+            <!--android:inputType="number"-->
+            <EditText
+                android:id="@+id/dorm_number"
+                style="@style/textview28_black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:hint="请输入一卡通个人编号"
+
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_all"
+            android:layout_height="@dimen/dp8"
+            android:background="@color/theme_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_item_press_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x30"
+                android:text="@string/user_pwd"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+            <EditText
+                android:id="@+id/input_pwd"
+                style="@style/textview28_black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:hint="@string/input_password"
+                android:inputType="numberPassword"
+                android:maxLength="8"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_onclick"
+            style="@style/login_btn_new"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp100"
+            android:text="确定"
+            android:textSize="@dimen/dp15" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/line_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_color"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="340dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/eidt_card_pop">
+
+            <TextView
+                android:id="@+id/placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/tv_Prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/placeholder"
+                android:layout_centerHorizontal="true"
+                android:text="认证成功"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_Prompt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp18"
+                android:text="您的一卡通认证成功可立即使用"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

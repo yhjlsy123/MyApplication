@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/recharge_bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/recharge_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                android:src="@mipmap/fanhui" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/textview40_black"
+                android:layout_centerInParent="true"
+                android:text="充值"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/dp10"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginRight="@dimen/x40">
+
+                <TextView
+                    android:id="@+id/tv_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black333"
+                    android:textSize="18dp" />
+
+                <com.zhuochi.hydream.view.RoundedImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/defaut_user_photo"
+                    app:border_color="@color/blue4DA9FF"
+                    app:border_width="@dimen/x1"
+                    app:corner_radius="@dimen/x200" />
+
+            </RelativeLayout>
+
+            <View style="@style/view_all" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/recharge"
+                android:textColor="@color/black333"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x40"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp18"
+                android:visibility="gone" />
+
+            <com.zhuochi.hydream.view.CustomGridView
+                android:id="@+id/recharge_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginRight="@dimen/x40"
+                android:layout_marginTop="@dimen/dp10"
+                android:horizontalSpacing="30px"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="15dp" />
+
+            <ListView
+                android:id="@+id/listViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:cacheColorHint="@color/white"
+                android:divider="@null"
+                android:scrollbars="none"></ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recharge_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击充值，即表示已阅读并同意"
+                    android:textColor="@color/black333"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/recharge_refund_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充值与退款协议"
+                    android:textColor="@color/redfb3829"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_appName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/black333" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:text="不会以任何形式要求您输入银行账户和密码"
+                    android:textColor="@color/black333" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/recharge_commit"
+            style="@style/login_btn_new"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:text="@string/recharge" />
+    </LinearLayout>
+
+</RelativeLayout>

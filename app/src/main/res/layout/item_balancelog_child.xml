@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/item_balance_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp70"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.zhuochi.hydream.view.RoundedImageView
+            android:id="@+id/img_sign"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginLeft="@dimen/dp22"
+            app:corner_radius="@dimen/x100"></com.zhuochi.hydream.view.RoundedImageView>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp22"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_balance_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black_rank_text"
+                android:textSize="@dimen/dp15" />
+
+            <TextView
+                android:id="@+id/tv_balance_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_rank_text"
+                android:textSize="@dimen/dp12" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_balance_money"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/dp22"
+            android:gravity="center_vertical"
+            android:textColor="@color/blue_rank_bg"
+            android:textSize="@dimen/dp20" />
+
+    </LinearLayout>
+</LinearLayout>

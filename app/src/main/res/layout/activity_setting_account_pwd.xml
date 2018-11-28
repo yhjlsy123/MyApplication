@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/message_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="重置登录密码"
+            android:textColor="@color/black333"
+            android:textSize="@dimen/dp20" />
+    </RelativeLayout>
+
+    <View style="@style/view_all" />
+
+    <RelativeLayout
+        android:id="@+id/user_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x40"
+        android:background="@mipmap/my_top_headportrait_bg">
+
+        <com.zhuochi.hydream.view.RoundedImageView
+            android:id="@+id/userinfo_photo"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/defaut_user_photo"
+            app:border_color="@color/blue4DA9FF"
+            app:border_width="@dimen/x1"
+
+            app:corner_radius="@dimen/x200" />
+
+        <ImageView
+            android:id="@+id/info_authe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/x3"
+            android:layout_marginRight="@dimen/x3"
+            android:src="@mipmap/user_info_authe"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp40"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <View
+           style="@style/view_all"/>
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前密码:"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+            <EditText
+                android:id="@+id/tv_pwd_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:drawablePadding="@dimen/x40"
+                android:hint="请输入当前密码"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:textColorHint="@color/gray999"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:layout_marginTop="10dp"
+            android:background="@color/theme_white" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="创建密码:"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+            <EditText
+                android:id="@+id/tv_pwd_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:hint="请输入新密码"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:textColorHint="@color/gray999"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:layout_marginTop="10dp"
+            android:background="@color/theme_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认密码:"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+            <EditText
+                android:id="@+id/tv_pwd_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="true"
+                android:hint="请确认密码"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:textColorHint="@color/gray999"
+                android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_all"
+            android:layout_marginTop="10dp" />
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/login_enter"
+        style="@style/login_btn_new"
+        android:layout_marginTop="@dimen/x130"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginLeft="@dimen/dp20"
+        android:gravity="center"
+        android:text="@string/button_sure" />
+</LinearLayout>

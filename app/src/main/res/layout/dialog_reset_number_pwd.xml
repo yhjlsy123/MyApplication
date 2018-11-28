@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialog_bg"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:background="@mipmap/reset_number_pop_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_reset_number_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/reset_number_title"
+                android:textSize="@dimen/dp25" />
+
+            <TextView
+                android:id="@+id/dialog_reset_number_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/reset_number_context"
+                android:textSize="@dimen/dp15" />
+
+            <Button
+                android:id="@+id/reset_number_button"
+                android:layout_height="@dimen/dp50"
+                style="@style/login_btn_new"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/login_enter"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

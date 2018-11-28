@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/feedback_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@mipmap/feedback_icon_no" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/content_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/feedback_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y260"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:layout_marginRight="@dimen/x20"
+                    android:layout_marginTop="@dimen/y20"
+                    android:background="@color/white"
+                    android:cursorVisible="true"
+                    android:gravity="left"
+                    android:hint="您的只言片语,我们随时聆听"
+                    android:maxLength="300"
+                    android:padding="@dimen/x22"
+                    android:textColor="@color/gray959595"
+                    android:textColorHint="@color/gray959595"
+                    android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/feedback_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x44"
+                    android:layout_marginTop="@dimen/y16"
+                    android:text="还可以输入300个字符"
+                    android:textColor="@color/gray959595"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+
+                    <HorizontalScrollView
+                        android:id="@+id/hor_scrollview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/scrollview_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+
+                    </HorizontalScrollView>
+                    <!--
+                                <ImageView
+                                    android:id="@+id/img_choose"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:adjustViewBounds="true"
+                                    android:visibility="gone"/>
+                    -->
+
+                    <ImageView
+                        android:id="@+id/img_feed"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="5dp"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/feedback_add_img" />
+                    <!--
+                                <FrameLayout
+                                    android:id="@+id/ll_img_feed"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@id/img_choose">
+
+                                    <ImageView
+                                        android:id="@+id/img_feed"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:background="@color/feedback_color"/>
+
+                                    <ImageView
+                                        android:id="@+id/img_feed_photo"
+                                        android:layout_width="40dp"
+                                        android:layout_height="30dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_gravity="center"
+                                        android:src="@mipmap/xiangjibai"
+                                        android:visibility="visible"/>
+                                </FrameLayout>
+                    -->
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/theme_white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp15"
+                    android:layout_marginLeft="@dimen/x20"
+                    android:text="选择反馈类型"
+                    android:textColor="@color/black333" />
+
+                <View style="@style/view_all" />
+
+
+                <com.zhuochi.hydream.view.CustomGridView
+                    android:id="@+id/feedback_type_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/dp5"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/dp5" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/feedback_commit"
+                style="@style/login_btn_new"
+                android:layout_below="@+id/content_container"
+                android:layout_margin="@dimen/dp10"
+                android:text="提 交" />
+            <!--意见反馈历史-->
+            <LinearLayout
+                android:id="@+id/feedback_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="160px"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/x160"
+                        android:layout_height="1px"
+                        android:background="@color/line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:layout_marginRight="@dimen/x30"
+                        android:text="历史记录"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="@dimen/x160"
+                        android:layout_height="1px"
+                        android:background="@color/line" />
+                </LinearLayout>
+
+                <com.zhuochi.hydream.view.CustomListView
+                    android:id="@+id/feedback_history_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

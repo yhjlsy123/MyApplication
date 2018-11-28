@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/userinfo_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="兑换中心"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@mipmap/exchange_ban" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp15"
+            android:gravity="center"
+            android:text="兑换区"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/dp15" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp97"
+            android:background="@color/sky_blue">
+
+            <TextView
+                android:id="@+id/Hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"
+                android:text="恭喜你获得换购资格"
+                android:textColor="@color/theme_color"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Hint"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请输入兑换码"
+                    android:textColor="@color/black333" />
+
+                <EditText
+                    android:id="@+id/login_phone"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@android:color/white"
+                    android:cursorVisible="true"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColorHint="@color/gray999"
+                    android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp15"
+            android:gravity="center"
+            android:text="兑换说明"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/dp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1.兑换的前提是基督教的绿山咖啡离开了疯狂的浪费地方大幅度的覆盖的地方地方"
+                android:textColor="@color/black333" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="1.兑换的前提是基督教的绿山咖啡离开了疯狂的浪费地方大幅度的覆盖的地方地方"
+                android:textColor="@color/black333" />
+
+            <Button
+                style="@style/login_btn_new"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="确认兑换" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--兑换成功-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_color"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/exchange_success_pop"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_hin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="180dp"
+                android:text="兑换成功"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/dp100"
+                android:text="兑换20元澡币可立即使用"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--获得兑换称号-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/exchange_pop_bg"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/exchange_pop"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/Hint1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="150dp"
+                android:text="恭喜获得本月澡王"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp20" />
+
+            <TextView
+                android:id="@+id/tv_hin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Hint1"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/dp30"
+                android:text="根据收到的消息去兑换中心兑换澡币"
+                android:textColor="@color/black333"
+                android:textSize="@dimen/dp15" />
+
+            <Button
+                android:id="@+id/confrim"
+                style="@style/login_btn_new"
+                android:layout_below="@+id/tv_hin2"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="@dimen/dp30"
+                android:text="立即兑换" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/x710"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_stroke_white_backgroud"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tip1_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/y40"
+            android:layout_marginTop="@dimen/y40"
+            android:gravity="center"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:textColor="@color/black333"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20">
+
+            <Button
+                android:id="@+id/tip1_ok"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bg_corner_blue"
+                android:textColor="@color/white"
+                android:text="我知道了"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/tip1_canel"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/x50"
+                android:layout_weight="1"
+                android:background="@drawable/shape_bg_corner_blue_white"
+                android:text="@string/cancle"
+                android:textColor="@color/blue4DA9FF"
+                android:visibility="gone"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--<com.zhuochi.hydream.utils.Util xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:id="@+id/vertical_textview"--><!--android:layout_width="match_parent"--><!--android:layout_height="25dp"--><!--android:background="@color/theme_color"--><!--android:ellipsize="marquee"--><!--android:focusable="true"--><!--android:focusableInTouchMode="true"--><!--android:marqueeRepeatLimit="marquee_forever"--><!--android:scrollHorizontally="true"--><!--android:singleLine="true"--><!--android:text="路漫漫其修远兮"--><!--android:textColor="@color/white"--><!--android:textSize="12sp"/>-->
+
+
+    <com.zhuochi.hydream.view.AutoHorizontalScrollTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vertical_textview"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@color/blue4DA9FF"
+    android:gravity="center_vertical"
+    android:textColor="@color/white"
+    android:textSize="12sp"
+ />

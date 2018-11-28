@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x30">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y114"
+                android:gravity="center"
+                android:text="服务中..."
+                android:textColor="@color/theme_color"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用机位"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/serving_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x30"
+                    android:text="---"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:layout_marginTop="@dimen/y30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用时间"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/serving_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x30"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/y30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cost"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/serving_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x30"
+                    android:text="---"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_marginTop="@dimen/y33"
+                android:background="@color/line" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:layout_height="@dimen/y100">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="开机密码"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/serving_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/service_hide"
+                    android:gravity="center_vertical"
+                    android:inputType="numberPassword"
+                    android:text="---"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/service_hide"
+                    style="@style/pwdcheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:paddingRight="@dimen/x30"
+                    android:src="@mipmap/kaiguimima_hide" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginRight="@dimen/x30"
+                android:background="@color/line"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="到时提醒"
+                    android:textColor="@color/gray999"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/action_bar"
+        android:id="@+id/service_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp100"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/refresh_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/home_ing_waiting_icon" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:background="@drawable/shape_stroke_white_backgroud"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:padding="20px">
+
+            <ImageView
+                android:layout_width="@dimen/x44"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:src="@mipmap/home_tip" />
+
+            <TextView
+                android:id="@+id/home_tip"
+                style="@style/textview28_black"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginTop="@dimen/y8"
+                android:lineSpacingExtra="@dimen/y8"
+                android:text="@string/servicing_tip"
+                android:maxLines="2"
+                android:textSize="28px" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/service_stop"
+            style="@style/textview40_white"
+            android:layout_width="@dimen/x710"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_bg_corner_blue"
+            android:gravity="center"
+            android:text="@string/stop_money" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/linear_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:background="@color/alpha_color"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="@dimen/x710"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_stroke_white_backgroud"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tip1_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/y40"
+                android:layout_marginTop="@dimen/y40"
+                android:gravity="center"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                android:textColor="@color/black333"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20">
+
+                <Button
+                    android:id="@+id/tip1_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_corner_blue"
+                    android:text="我知道了"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

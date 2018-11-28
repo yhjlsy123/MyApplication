@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android-apt'
+//bugly账号密码
+apply plugin: 'bugly'
+bugly {
+    appId = "0e94f61550"
+    appKey = "5e839a9a-e9ea-40cf-a608-5e4ba08cac6d"
+    debug = true
+}
+android {
+
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    dexOptions {
+        jumboMode true
+    }
+    defaultConfig {
+        applicationId "com.zhuochi.hydream"
+        useLibrary 'org.apache.http.legacy'
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 6
+        versionName '1.1.5'
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix ""
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+            //移除无用的resource文件
+            shrinkResources false
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+//应用 Bugtags 插件，插件只支持 2.1.3 及以下的 ios 版本
+apply plugin: 'com.bugtags.library.plugin'
+
+//Bugtags 插件配置
+bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
+    appKey "be8b9ce8f6f236fcc59d228c088dac9d"  //这里是你的 appKey
+    appSecret "2cbae4a7870ba65387d724591d993854"    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:27.0.3'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:design:27.0.3'
+    compile 'com.android.support:recyclerview-v7:27.0.3'
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor  'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:volley-integration:1.4.0'
+    compile 'io.github.openfeign:feign-gson:9.3.1'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.qiniu:qiniu-android-sdk:7.3.3'
+    //    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    //    compile project(':PushSDK')
+    compile files('libs/alipaySdk-20161009.jar')
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile files('libs/libammsdk.jar')
+    compile 'com.github.Yinuan:Bluepro-hongyi:v1.7'
+    //    compile 'cn.jiguang.sdk:jpush:3.1.1'  // 此处以JPush 3.1.1 版本为例。
+    //    compile 'cn.jiguang.sdk:jcore:1.1.9'  // 此处以JCore 1.1.9 版本为例。
+    compile files('libs/jcore-android-1.2.1.jar')
+    //    compile 'com.alibaba.fastjson:1.2.28'
+    compile files('libs/fastjson-1.2.9.jar')
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    compile 'com.jude:easyrecyclerview:4.4.2'
+    compile 'com.dalong:marqueeview:1.0.1'
+    compile 'com.bugtags.library:bugtags-lib:latest.integration'
+    //    compile project(':marqueeview')
+}

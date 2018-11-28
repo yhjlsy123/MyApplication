@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loonggg="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/home_choice_bathroomlocation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y98"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/home_bathroom_location"
+            style="@style/textview30_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x40"
+            android:drawableLeft="@mipmap/home_location"
+            android:drawablePadding="@dimen/x28" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x40"
+            android:src="@mipmap/arrow_down" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/origin_filter_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6000"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/scrollview_choiceroom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:overScrollMode="never"
+            android:scrollbarStyle="outsideOverlay">
+
+            <com.zhuochi.hydream.view.CustomListView
+                android:id="@+id/choiceroom_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@drawable/selector_item_press_bg" />
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/grayeee"
+            android:paddingLeft="@dimen/x30"
+            android:paddingRight="@dimen/x20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="浴室"
+                android:textColor="@color/black666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="空闲/总计"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/filter_footer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/scrollview_choiceroom" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/origin_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhuochi.hydream.view.AutoHorizontalScrollTextView
+            android:id="@+id/txt_auto"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/blue4DA9FF"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/origin_errbg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9000"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/origin_errtip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/x60"
+                android:layout_marginRight="@dimen/x60"
+                android:gravity="center"
+                android:lineSpacingExtra="4px"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <com.zhuochi.hydream.view.RecyclerViewBanner
+            android:id="@+id/rv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_below="@id/txt_auto"
+            loonggg:interval="3000"
+            loonggg:isShowPoint="true" />
+
+        <ImageView
+            android:id="@+id/img_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_banner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/icon_home_middle" />
+
+        <ImageView
+            android:id="@+id/img_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_txt"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/icon_home_middle_but_s"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_onclick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/selector_home_start"
+            android:text="点击进行时"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/pay_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="@string/pay_select"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linetip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp10">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_Pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp24"
+            android:textColor="@color/green2aa"
+            android:textSize="@dimen/dp24" />
+        <!--实付金额 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp40"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实付金额"
+                android:textColor="@color/theme_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_realMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="--"
+                android:textColor="@color/black333"
+                android:textSize="15dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用时长"
+                android:textColor="@color/theme_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_blowerContentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="--"
+                android:textColor="@color/black333"
+                android:textSize="15dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp40"
+            android:layout_marginRight="@dimen/dp40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用        量"
+                android:textColor="@color/theme_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_Consumption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="--"
+                android:textColor="@color/black333"
+                android:textSize="15dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp40"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始时间"
+                android:textColor="@color/theme_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="--"
+                android:textColor="@color/black333"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp40"
+            android:layout_marginRight="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束时间"
+                android:textColor="@color/theme_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_endTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="--"
+                android:textColor="@color/black333"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linetip"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/dp25"
+            android:gravity="center"
+            android:text="支付方式" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"></ListView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/line_tip_not"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/dp10"
+            android:background="@drawable/shape_stroke_white_backgroud"
+            android:orientation="horizontal"
+            android:padding="20px">
+
+            <ImageView
+                android:layout_width="@dimen/x44"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/home_tip" />
+
+            <TextView
+                style="@style/textview28_black"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginTop="@dimen/y8"
+                android:lineSpacingExtra="@dimen/y8"
+                android:text="请选择支付方式"
+                android:maxLines="2"
+                android:textSize="28px" />
+        </LinearLayout>
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/login_btn_new"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/pay" />
+
+    </LinearLayout>
+</RelativeLayout>

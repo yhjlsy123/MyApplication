@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/shouldpay_cancel"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_corner_yellow_white"
+        android:text="@string/cancle"
+        android:textColor="@color/blue4DA9FF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/list" />
+
+    <Button
+        android:id="@+id/shouldpay_pay"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_weight="1"
+        android:background="@drawable/selector_bg_corner_blue"
+        android:text="@string/pay"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/list"
+        app:layout_constraintLeft_toRightOf="@+id/shouldpay_cancel" />
+</android.support.constraint.ConstraintLayout>

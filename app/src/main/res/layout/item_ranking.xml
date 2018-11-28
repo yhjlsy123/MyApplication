@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp65"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp5"></View>
+
+    <LinearLayout
+        android:id="@+id/item_rank_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp53"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp34"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp22"></ImageView>
+
+                <TextView
+                    android:id="@+id/text_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dp22"
+                    android:text="1"
+                    android:textSize="@dimen/dp17" />
+            </RelativeLayout>
+
+
+            <com.zhuochi.hydream.view.RoundedImageView
+                android:id="@+id/img_head"
+                android:layout_width="@dimen/dp34"
+                android:layout_height="@dimen/dp34"
+                android:layout_marginLeft="@dimen/dp25"
+                app:corner_radius="@dimen/x100"></com.zhuochi.hydream.view.RoundedImageView>
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:text="哇哈哈"
+                android:textColor="@color/black_rank_text"
+                android:textSize="@dimen/dp15" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp22"
+            android:gravity="center_vertical"
+            android:text="sssssss"
+            android:textColor="@color/black_rank_text"
+            android:textSize="@dimen/dp15" />
+    </LinearLayout>
+
+
+</LinearLayout>

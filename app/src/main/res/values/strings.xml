@@ -1,0 +1,233 @@
+<resources>
+    <string name="app_name">大白U帮</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="error_to_exit">休息，休息一下</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="login_code">获取验证码</string>
+
+    <string name="bathroom_location">浴室位置</string>
+    <string name="bathroom_choice">选择浴室</string>
+    <string name="bathroom_using">使用中</string>
+    <string name="bathroom_use">可用</string>
+    <string name="appoint">开始使用</string>
+    <string name="freightBasis">温馨提示：</string>
+    <string name="freightBasis1">前30min0.1元/分</string>
+    <string name="freightBasis2">后30min0.5元/分</string>
+    <string name="drawer_money">钱包</string>
+    <string name="choice_school">选择校区</string>
+    <string name="setting">设置</string>
+    <string name="setting_call">联系站长</string>
+    <string name="start_use">开始使用</string>
+
+    <string name="drawer_rank">排行榜</string>
+    <string name="input_phone">昵称/手机号</string>
+    <string name="input_hin_phone">输入手机号</string>
+    <string name="back_pwd">找回密码</string>
+
+    <string name="input_update_phone">请输入要更换的手机号</string>
+
+    <string name="input_code">请输入验证码</string>
+    <string name="input_password">请输入密码</string>
+    <string name="login_quick">快捷登录</string>
+    <string name="back_password"><u>忘记密码</u></string>
+    <string name="input_onCar_number">请输入一卡通号或学号</string>
+
+    <string name="login_enter">登 录</string>
+    <string name="choice_school_title">选择学校</string>
+    <string name="choice_schoolarea_title">选择校区</string>
+    <string name="choice_schoolorg_title">选择楼号</string>
+
+    <string name="school_type1">附近学校</string>
+    <string name="school_type2">其他学校</string>
+    <string name="edit_userinfo">编辑资料</string>
+    <string name="cancle">取 消</string>
+    <string name="pay">支 付</string>
+    <string name="finish">完 成</string>
+    <string name="fix_user_photo">更换头像</string>
+    <string name="nikename">昵&#160;&#160;&#160;&#160;&#160;&#8201;称：</string>
+    <string name="gender">性&#160;&#160;&#160;&#160;&#160;&#8201;别：</string>
+    <string name="age">出生日期:</string>
+    <string name="numberid">学号</string>
+    <string name="phone_number">手机号</string>
+    <string name="underwrite">个性签名:</string>
+    <string name="updatephone_number">更换号码</string>
+    <string name="lineup_hin">正在排队，请耐心等待</string>
+    <string name="one_card_solution">一卡通：</string>
+
+    <string name="uncertified">未认证</string>
+    <string name="certified">已认证</string>
+
+    <string name="reset_open_pwd">重置开柜密码</string>
+    <string name="setting_title">设置</string>
+    <string name="setting_exit">退出</string>
+    <string name="setting_userguide">用户指南</string>
+    <string name="aboutus">关于我们</string>
+    <string name="checkversion">检查新版本</string>
+    <string name="message_tilte">通知消息</string>
+    <string name="message_data">消息详情</string>
+
+    <string name="message_more">查看详情</string>
+    <string name="should_pay">您有一个订单未支付,请及时支付</string>
+    <string name="dialog_id">身份认证</string>
+    <string name="main_optional">可选</string>
+    <string name="main_selected">已选</string>
+    <string name="main_not_optional">不可选</string>
+
+    <string name="current_queue">当前排队</string>
+    <string name="wait">预计等待</string>
+    <string name="rank_alltime">累计时间排行</string>
+    <string name="wait_service">待服务</string>
+    <string name="line_up">排 队</string>
+    <string name="payable">确认支付</string>
+    <string name="confirm">确定</string>
+
+    <string name="shiyongshenming">点击"登录",即表示您同意</string>
+    <string name="stop">停止计费</string>
+    <string name="input_regex">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZ</string>
+
+    <!-- 下拉刷新，上拉加载更多 -->
+    <string name="qq_header_reset">下拉刷新</string>
+    <string name="qq_header_pull">下拉刷新</string>
+    <string name="qq_header_pull_over">释放立即刷新</string>
+    <string name="qq_header_refreshing">正在加载...</string>
+    <string name="qq_header_completed">刷新成功</string>
+
+
+    <!-- 下拉刷新，上拉加载更多 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">释放立即刷新</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_hint_finish">刷新完成</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">释放载入更多</string>
+    <!--登录、注册-->
+    <string name="registers_title">注册</string>
+    <string name="login_agreement">点击“登录”，即表示您同意</string>
+
+
+    <string name="registers">立即注册</string>
+    <string name="quick_login">快速登录</string>
+    <string name="user_info">个人信息</string>
+    <string name="user_school_data">校园资料</string>
+    <string name="user_id_data">认证信息</string>
+    <string name="user_consumption_log">消费记录</string>
+    <string name="user_my_wallet">我的钱包</string>
+    <string name="user_common_problem">常见问题</string>
+    <string name="user_Opinion">意见反馈</string>
+    <string name="user_reset_pwd">重置密码</string>
+    <string name="user_call_admin">联系站长</string>
+    <string name="user_oneCard">一卡通认证</string>
+    <string name="user_pwd">密&#160;&#160;&#160;&#8201;码：</string>
+    <string name="user_name">姓&#160;&#160;&#160;&#8201;名：</string>
+    <string name="user_studentId">学&#160;&#160;&#160;&#8201;号：</string>
+    <string name="user_studentId_hin">输入学号</string>
+    <string name="user_code">验&#160;&#160;&#160;&#8201;证&#160;&#160;&#160;&#8201;码：</string>
+    <string name="user_new_phone">新&#160;&#160;&#160;&#8201;号&#160;&#160;&#160;&#8201;码：</string>
+    <string name="user_name_hin">请输入您的真实姓名</string>
+    <string name="pay_select">支付选择</string>
+
+    <string name="cost">费&#160;&#160;&#160;&#8201;&#160;&#160;&#160;&#8201;用</string>
+    <string name="stop_money">停&#160;&#160;&#160;&#8201;&#160;&#160;&#160;&#8201;止</string>
+
+    <string name="recharge">充值</string>
+    <string name="blower">吹风机</string>
+    <string name="washer">洗衣机</string>
+    <string name="bathing">洗浴</string>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="personal_birthday">出生日期</string>
+    <string name="wait_tip">将自动取消\n点击关闭后才可以结束洗澡流程</string>
+    <string name="servicing_tip">点击停止计费后才可以结束洗澡流程</string>
+
+    <string name="top_no_data">暂无数据</string>
+    <!--6.0权限-->
+    <string name="permission">权限(permission)</string>
+    <string name="no_permissions">应用需要必要的运行权限</string>
+
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="quit">退出</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--消费详情-->
+    <string name="rankings_time">累计时长排行</string>
+    <string name="payment_method">付款方式</string>
+    <string name="real_payment">实付金额</string>
+
+    <string name="commodity_description">商品说明</string>
+    <string name="long_bath_time">使用时长</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="creation_time">创建时间</string>
+    <string name="order_number">订&#160;&#160;单&#160;&#160;号</string>
+    <string name="length_use">使用时长</string>
+    <string name="blower_payment">吹风机支付费用</string>
+    <string name="bathing_payment">洗澡支付费用</string>
+    <string name="order_costDoubt">对订单费用有疑问?</string>
+    <string name="order_doubt">对订单费用有疑问？</string>
+    <!--钱包界面-->
+    <string name="deposit">押金</string>
+    <string name="refund">退款</string>
+
+    <string name="balance_detail">余额明细</string>
+    <string name="exchange_core">兑换中心</string>
+    <!--重置设备密码-->
+    <string name="passw_now">当前密码</string>
+    <string name="passw_creat">创建密码</string>
+    <string name="passw_sure">确认密码</string>
+    <string name="please_input_passw_now">请输入当前密码</string>
+    <string name="please_input_passw_new">请输入新密码</string>
+    <string name="please_input_passw_again">请确认密码</string>
+    <string name="please_pwd_hin">此密码是你洗浴时开启水阀和吹风机的密码，请妥善保管</string>
+
+    <string name="button_sure">确定</string>
+    <string name="submit">确认</string>
+    <string name="account_password">账号密码：</string>
+    <string name="remoney_account">收款账号：</string>
+
+    <string name="reset_equipment_title">重置设备密码成功</string>
+    <string name="reset_equipment_title_first">重置设备密码成功</string>
+    <string name="reset_equipment_context">您的设备密码已重置成功请重下次使用输入新密码</string>
+    <string name="reset_equipment_context_first">您的设备密码已重置成功可立即体验</string>
+
+    <string name="reset_number_title">修改密码成功</string>
+    <string name="reset_number_context">您的密码已修改成功请重新登录</string>
+    <string name="account_password_hint">输入账号密码</string>
+    <string name="account_re_hint">输入收款账号</string>
+    <!--认证信息-->
+    <string name="authentication_card_title">认证成功</string>
+    <string name="authentication_card_context">您的一卡认证成功，可立即使用</string>
+    <string name="authentication_phone_title">修改手机号成功</string>
+    <string name="authentication_phone_context">重新登录时可直接输入新手机号</string>
+
+    <!--缺省页-->
+    <string name="default_no_coupon">还没有优惠券</string>
+    <string name="default_no_collection">暂无收藏</string>
+    <string name="default_no_internet">网络不给力</string>
+    <string name="default_no_message">没有通知消息</string>
+    <string name="default_no_area">敬请期待</string>
+    <string name="default_no_data">搜索不到任何结果</string>
+    <string name="default_waiting_loading">等待加载</string>
+    <string name="default_404">404报错</string>
+    <string name="default_waiting_link">等待链接</string>
+    <string name="default_no_perssion">无权限</string>
+
+
+    <!--增加-->
+    <string name="consume_detail">消费详情</string>
+    <string name="select_time">请选择使用时长</string>
+    <string name="element">元</string>
+    <string name="Consumption">用&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;量</string>
+
+</resources>

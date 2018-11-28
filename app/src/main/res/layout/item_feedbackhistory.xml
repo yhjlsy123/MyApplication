@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:layout_marginLeft="@dimen/dp23"
+        android:layout_marginRight="23dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/item_history_create"
+            style="@style/textview28_black"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="2017-01-23"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:orientation="horizontal"
+            android:id="@+id/line_user"
+            android:paddingBottom="30px">
+
+            <TextView
+                android:id="@+id/item_history_feedback_system"
+                style="@style/textview28_black"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/duihua_own"
+                android:paddingTop="@dimen/dp15"
+                android:paddingBottom="@dimen/dp15"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black333" />
+
+            <com.zhuochi.hydream.view.RoundedImageView
+                android:id="@+id/item_history_systemphoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/defaut_user_photo"
+                app:border_color="@color/blue4DA9FF"
+                app:border_width="@dimen/x1"
+                app:corner_radius="@dimen/x200"
+                app:layout_auto_basewidth="height" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/line_admin"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_height="wrap_content">
+
+            <com.zhuochi.hydream.view.RoundedImageView
+                android:id="@+id/item_history_userphoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/defaut_user_photo"
+                app:border_color="@color/blue4DA9FF"
+                app:border_width="@dimen/x1"
+                app:corner_radius="@dimen/x200"
+                app:layout_auto_basewidth="height" />
+
+            <TextView
+                android:id="@+id/item_history_content"
+                style="@style/textview28_black"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/rrr"
+                android:paddingTop="@dimen/dp15"
+                android:paddingBottom="@dimen/dp15"
+                android:textColor="@color/black333" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

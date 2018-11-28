@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_show_tip"
+        android:layout_below="@+id/tv_title"
+        android:background="#00FFFF" />
+
+    <com.zhuochi.hydream.view.pop.TipTextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#faf3a1"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="用动画实现提示"
+        android:textColor="#ff4e00"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FF00FF"
+        android:gravity="center"
+        android:text="这是一个标题栏"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_show_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="弹窗提示!!!" />
+
+</RelativeLayout>

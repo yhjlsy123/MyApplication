@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp70"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.zhuochi.hydream.view.RoundedImageView
+            android:id="@+id/img_head"
+            android:layout_width="@dimen/dp45"
+            android:layout_height="@dimen/dp45"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp22"
+            app:corner_radius="@dimen/x200"></com.zhuochi.hydream.view.RoundedImageView>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/rank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:ellipsize="end"
+                android:maxEms="14"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black_rank_text"
+                android:textSize="@dimen/dp18" />
+
+            <TextView
+                android:id="@+id/rank_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp10"
+                android:textColor="@color/blue_rank_bg"
+                android:textSize="@dimen/dp14" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp22"
+            android:gravity="center_vertical"
+            android:textColor="@color/blue_rank_bg"
+            android:textSize="@dimen/dp20" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

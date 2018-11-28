@@ -1,0 +1,132 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android-apt'
+
+//bugly账号密码
+apply plugin: 'bugly'
+bugly {
+    appId = "0e94f61550"
+    appKey = "5e839a9a-e9ea-40cf-a608-5e4ba08cac6d"
+    debug = true
+}
+android {
+    signingConfigs {
+        config {
+            keyAlias 'superbathe'
+            keyPassword 'zc12345'
+            storeFile file('E:/wokespace/MyApplication/app/bathe.jks')
+            storePassword 'zc12345'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "8g"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "com.zhuochi.hydream"
+        useLibrary 'org.apache.http.legacy'
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 6
+        versionName '1.1.6'
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+
+            abiFilters 'armeabi' ,'x86', 'armeabi-v7a','x86_64', 'arm64-v8a', 'mips', 'mips64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix ""
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources true
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFile 'E:/wokespace/MyApplication/app/proguard-rules.pro'
+            signingConfig signingConfigs.config
+            pseudoLocalesEnabled true
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+    }
+}
+//应用 Bugtags 插件，插件只支持 2.1.3 及以下的 ios 版本
+apply plugin: 'com.bugtags.library.plugin'
+
+//Bugtags 插件配置
+bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
+    appKey "be8b9ce8f6f236fcc59d228c088dac9d"  //这里是你的 appKey
+    appSecret "2cbae4a7870ba65387d724591d993854"    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    //    implementation 'com.jakewharton:butterknife:8.4.0'
+    //    apt 'com.jakewharton:butterknife-implementationr:8.4.0'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:volley-integration:1.4.0'
+    implementation 'io.github.openfeign:feign-gson:9.3.1'
+    implementation 'com.zhy:autolayout:1.4.5'
+    implementation 'com.qiniu:qiniu-android-sdk:7.3.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    //    implementation project(':PushSDK')
+    implementation files('libs/alipaySdk-20161009.jar')
+    implementation 'com.jiechic.library:xUtils:2.6.14'
+    implementation files('libs/libammsdk.jar')
+    implementation 'com.github.Yinuan:Bluepro-hongyi:v1.8'
+    //    implementation 'cn.jiguang.sdk:jpush:3.1.1'  // 此处以JPush 3.1.1 版本为例。
+    //    implementation 'cn.jiguang.sdk:jcore:1.1.9'  // 此处以JCore 1.1.9 版本为例。
+    implementation files('libs/jcore-android-1.2.1.jar')
+    implementation files('libs/fastjson-1.2.9.jar')
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    implementation 'com.jude:easyrecyclerview:4.4.2'
+    implementation 'com.dalong:marqueeview:1.0.1'
+    implementation 'com.bugtags.library:bugtags-lib:latest.integration'
+    //    implementation project(':marqueeview')
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+}

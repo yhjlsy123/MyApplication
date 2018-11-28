@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/x710"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_stroke_white_backgroud"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:text="请输入一卡通密码"
+            android:textColor="@color/black333"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:background="@drawable/shape_stoke_corner_gray_white"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/x30">
+
+                <EditText
+                    android:id="@+id/show_pwd_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:hint="请输入密码"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray999"
+                    android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                    android:textSize="17sp"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/setting_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:hint="请输入密码"
+                    android:inputType="numberPassword"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray999"
+                    android:textCursorDrawable="@drawable/shape_quicklogin_et_cursor"
+                    android:textSize="17sp"></EditText>
+            </FrameLayout>
+
+            <CheckBox
+                android:id="@+id/show_hide_pwd"
+                style="@style/pwdcheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/x30" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/setting_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@drawable/selector_bg_corner_blue"
+            android:text="确 定"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+    </LinearLayout>
+</LinearLayout>

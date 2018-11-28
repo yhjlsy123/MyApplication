@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/h5_back"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:paddingLeft="@dimen/x20"-->
+        <!--android:paddingRight="@dimen/x20"-->
+        <!--android:src="@mipmap/fanhui" />-->
+
+        <ImageView
+            android:id="@+id/line_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            style="@style/textview40_black"
+            android:layout_centerInParent="true"
+            android:text="@string/user_reset_pwd"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:id="@+id/user_bathe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_item_press_bg">
+
+        <TextView
+            style="@style/textview30_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:text="重置设备密码"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp20"
+            android:src="@mipmap/choice_area_enter" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_account_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@drawable/selector_item_press_bg">
+
+        <TextView
+            style="@style/textview30_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:text="重置登录密码"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp20"
+            android:src="@mipmap/choice_area_enter" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

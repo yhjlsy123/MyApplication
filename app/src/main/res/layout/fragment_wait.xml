@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wait_service_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@drawable/shape_stroke_white_backgroud"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_loap"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text="请在"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/wait_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="----"
+                android:textColor="@color/red"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内到达浴室,逾期自动取消"
+                android:textColor="@color/black"
+                android:layout_marginRight="15dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y40"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/dp40"
+            android:paddingLeft="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y114"
+                android:gravity="center"
+                android:text="待服务"
+                android:textColor="@color/theme_color"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预约浴位"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/wait_bathroomid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x30"
+                    android:text="-----"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="浴室位置"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/wait_bathroomlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/x30"
+                    android:text="----"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_marginTop="@dimen/y33"
+                android:background="@color/line" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y100">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="开柜密码"
+                    android:textColor="@color/theme_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/wait_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/wait_hide_pwd"
+                    android:gravity="center_vertical"
+                    android:inputType="numberPassword"
+                    android:text="-----"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/wait_hide_pwd"
+                    style="@style/pwdcheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:paddingRight="@dimen/x30" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/service_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp50"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/refresh_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/home_ing_waiting_icon" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_stroke_white_backgroud"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:padding="20px">
+
+        <ImageView
+            android:layout_width="@dimen/x44"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/home_advance_prompt_icon" />
+
+        <TextView
+            android:id="@+id/home_tip"
+            style="@style/textview28_black"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/y8"
+            android:lineSpacingExtra="@dimen/y8"
+            android:maxLines="2"
+            android:textSize="28px" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+      android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/wait_cancel"
+            style="@style/textview40_white"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp10"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/selector_bg_corner_blue"
+            android:gravity="center"
+            android:text="@string/cancle" />
+
+        <Button
+            android:id="@+id/wait_confirm"
+            style="@style/textview40_white"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/dp10"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_bg_corner_blue"
+            android:gravity="center"
+            android:text="开始服务" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="68dp"
+    android:layout_height="68dp"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/img_feed_item"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:layout_marginTop="3dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/feedback_add_img" />
+
+    <ImageView
+        android:id="@+id/img_feed_item_delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/activity_dialog_close"
+        />
+
+</RelativeLayout>
